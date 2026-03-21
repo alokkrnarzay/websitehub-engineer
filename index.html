@@ -3,20 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All Useful Websites Hub</title>
+    <title>WebsiteHub - Discover Curated Tools & Resources</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <nav class="navbar">
+    <!-- Premium Notification Bar -->
+    <div class="notification-banner" id="notificationBanner">
+        <div class="notification-content">
+            <div class="notification-badge">✨ NEW</div>
+            <span class="notification-text">Join 5,000+ users discovering premium tools daily</span>
+            <button class="notification-close" onclick="closeNotification()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Enhanced Navigation Bar -->
+    <nav class="navbar" id="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <i class="fas fa-globe"></i>
+                <div class="logo-icon">
+                    <i class="fas fa-cube"></i>
+                </div>
                 <span>WebsiteHub</span>
             </div>
-            <ul class="nav-menu">
+            
+            <ul class="nav-menu" id="primaryMenu">
                 <li class="nav-item">
                     <a href="#home" class="nav-link active">Home</a>
                 </li>
@@ -24,13 +38,27 @@
                     <a href="#categories" class="nav-link">Categories</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#about" class="nav-link">About</a>
+                    <a href="#featured" class="nav-link">Featured</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#contact" class="nav-link">Contact</a>
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item nav-item-mobile-cta">
+                    <a href="#about" class="submit-btn submit-btn-mobile">
+                        <i class="fas fa-plus"></i>
+                        Submit Website
+                    </a>
                 </li>
             </ul>
-            <div class="hamburger">
+
+            <div class="nav-actions">
+                <a href="#about" class="submit-btn" aria-label="Submit website">
+                    <i class="fas fa-plus"></i>
+                    Submit Website
+                </a>
+            </div>
+
+            <div class="hamburger" id="hamburger" role="button" aria-label="Open navigation menu" aria-controls="primaryMenu" aria-expanded="false" tabindex="0">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -38,39 +66,204 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero Section with Enhanced Design -->
     <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="gradient-blob blob-1"></div>
+            <div class="gradient-blob blob-2"></div>
+            <div class="gradient-blob blob-3"></div>
+        </div>
+
         <div class="hero-container">
-            <div class="hero-content">
-                <h1 class="hero-title">All Useful Websites in One Place</h1>
-                <p class="hero-subtitle">Find the most useful websites for daily life, learning, jobs, and tools.</p>
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                <span>Discover 500+ Curated Tools</span>
+            </div>
+
+            <h1 class="hero-title">
+                Your Gateway to the Web's Best Tools
+            </h1>
+            
+            <p class="hero-subtitle">
+                Stop wasting time searching. We've curated the most powerful, useful, and trending tools—all in one beautiful place. Save hours, boost productivity.
+            </p>
+
+            <!-- Enhanced Search Bar -->
+            <div class="search-section">
                 <div class="search-container">
                     <div class="search-box">
-                        <i class="fas fa-search search-icon"></i>
-                        <input type="text" id="searchInput" placeholder="Search for websites..." autocomplete="off">
+                        <i class="fas fa-search"></i>
+                        <input 
+                            type="text" 
+                            id="searchInput" 
+                            placeholder="Search tools, resources, or websites..." 
+                            autocomplete="off"
+                        >
+                        <div class="search-suggestions" id="searchSuggestions" style="display: none;"></div>
                     </div>
+                </div>
+
+                <!-- Trending Tags -->
+                <div class="trending-tags">
+                    <span class="trending-label">
+                        <i class="fas fa-fire-alt"></i> Trending:
+                    </span>
+                    <div class="tags-container">
+                        <button class="trend-tag" onclick="searchByTag(this)">AI Tools</button>
+                        <button class="trend-tag" onclick="searchByTag(this)">Dev Tools</button>
+                        <button class="trend-tag" onclick="searchByTag(this)">Productivity</button>
+                        <button class="trend-tag" onclick="searchByTag(this)">Free Resources</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Trust Indicators -->
+            <div class="trust-indicators">
+                <div class="trust-item">
+                    <div class="trust-number">5K+</div>
+                    <div class="trust-label">Active Users</div>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-number">500+</div>
+                    <div class="trust-label">Curated Tools</div>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-number">50M+</div>
+                    <div class="trust-label">Visits/Month</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Categories Section -->
+    <!-- Featured Section -->
+    <section id="featured" class="featured-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">✨ Featured This Week</h2>
+                <p class="section-subtitle">Handpicked by our team</p>
+            </div>
+
+            <div class="featured-grid">
+                <div class="featured-card premium">
+                    <div class="featured-badge">Top Pick</div>
+                    <div class="featured-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>ChatGPT</h3>
+                    <p>Advanced AI chatbot for productivity and creative tasks</p>
+                    <div class="featured-meta">
+                        <span class="tag">AI</span>
+                        <span class="tag">Trending</span>
+                    </div>
+                    <a href="#" class="featured-btn">Explore</a>
+                </div>
+
+                <div class="featured-card">
+                    <div class="featured-badge">Popular</div>
+                    <div class="featured-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Figma</h3>
+                    <p>Collaborative design platform for teams</p>
+                    <div class="featured-meta">
+                        <span class="tag">Design</span>
+                        <span class="tag">Pro</span>
+                    </div>
+                    <a href="#" class="featured-btn">Explore</a>
+                </div>
+
+                <div class="featured-card">
+                    <div class="featured-badge">Rising</div>
+                    <div class="featured-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>GitHub</h3>
+                    <p>Developer platform for version control</p>
+                    <div class="featured-meta">
+                        <span class="tag">Dev Tools</span>
+                        <span class="tag">Free</span>
+                    </div>
+                    <a href="#" class="featured-btn">Explore</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories/Browse Section -->
     <section id="categories" class="categories">
         <div class="container">
-            <h2 class="section-title">Website Categories</h2>
+            <div class="section-header">
+                <h2 class="section-title">🔍 Browse by Category</h2>
+                <p class="section-subtitle">Find exactly what you're looking for</p>
+            </div>
+            
             <div class="category-tabs">
                 <button class="tab-btn active" data-category="all">All</button>
-                <button class="tab-btn" data-category="government">Government Services</button>
+                <button class="tab-btn" data-category="our-project">Our Project</button>
+                <button class="tab-btn" data-category="government">Government</button>
                 <button class="tab-btn" data-category="jobs">Jobs & Career</button>
-                <button class="tab-btn" data-category="education">Education & Learning</button>
+                <button class="tab-btn" data-category="education">Education</button>
                 <button class="tab-btn" data-category="ai">AI Tools</button>
                 <button class="tab-btn" data-category="daily">Daily Useful</button>
-                <button class="tab-btn" data-category="social">Social Media</button>
-                <button class="tab-btn" data-category="entertainment">Entertainment</button>
-                <button class="tab-btn" data-category="developer">Developer Tools</button>
+                <button class="tab-btn" data-category="developer">Developer</button>
             </div>
             
             <div class="websites-grid" id="websitesGrid">
+                <!-- Our Project -->
+                <div class="website-card" data-category="our-project">
+                    <div class="card-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3 class="card-title">Project Dashboard</h3>
+                    <p class="card-description">Main project dashboard to manage all project activities and monitor progress.</p>
+                    <a href="#" target="_blank" class="card-button">Visit Dashboard</a>
+                </div>
+
+                <div class="website-card" data-category="our-project">
+                    <div class="card-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="card-title">GitHub Repository</h3>
+                    <p class="card-description">Source code repository for our project with version control and collaboration features.</p>
+                    <a href="https://github.com/alokkrnarzay" target="_blank" class="card-button">View Code</a>
+                </div>
+
+                <div class="website-card" data-category="our-project">
+                    <div class="card-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="card-title">Analytics Portal</h3>
+                    <p class="card-description">Project analytics and performance metrics with real-time data visualization.</p>
+                    <a href="#" target="_blank" class="card-button">View Analytics</a>
+                </div>
+
+                <div class="website-card" data-category="our-project">
+                    <div class="card-icon">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <h3 class="card-title">Task Manager</h3>
+                    <p class="card-description">Project task management system for tracking assignments and deadlines.</p>
+                    <a href="#" target="_blank" class="card-button">Manage Tasks</a>
+                </div>
+
+                <div class="website-card" data-category="our-project">
+                    <div class="card-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="card-title">Team Portal</h3>
+                    <p class="card-description">Team collaboration platform with communication tools and resource sharing.</p>
+                    <a href="#" target="_blank" class="card-button">Join Team</a>
+                </div>
+
+                <div class="website-card" data-category="our-project">
+                    <div class="card-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3 class="card-title">Documentation</h3>
+                    <p class="card-description">Comprehensive project documentation with guides, API references, and tutorials.</p>
+                    <a href="#" target="_blank" class="card-button">Read Docs</a>
+                </div>
+
                 <!-- Government Services -->
                 <div class="website-card" data-category="government">
                     <div class="card-icon">
@@ -908,6 +1101,15 @@
                     <h3 class="card-title">Mahindra Careers</h3>
                     <p class="card-description">Career opportunities at Mahindra Group in automotive, technology, and finance.</p>
                     <a href="https://careers.mahindra.com/" target="_blank" class="card-button">Visit Website</a>
+                </div>
+
+                <div class="website-card" data-category="jobs">
+                    <div class="card-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3 class="card-title">BTC Job - Tender Portal</h3>
+                    <p class="card-description">Central Selection Board tender job portal for government contracts and recruitment.</p>
+                    <a href="https://portal.centralselectionboard.com/" target="_blank" class="card-button">Visit Portal</a>
                 </div>
 
                 <!-- Education & Learning -->
@@ -2212,8 +2414,243 @@
         </div>
     </section>
 
+    <!-- Trending Now Section -->
+    <section class="trending-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">🔥 Trending Now</h2>
+                <p class="section-subtitle">Most discovered this week</p>
+            </div>
+
+            <div class="trending-grid">
+                <div class="trending-card">
+                    <div class="trending-rank">01</div>
+                    <div class="trending-content">
+                        <h4>ChatGPT</h4>
+                        <p>AI Chatbot</p>
+                        <div class="trending-growth">↑ 340% this week</div>
+                    </div>
+                    <a href="#" class="trending-visit">Visit</a>
+                </div>
+
+                <div class="trending-card">
+                    <div class="trending-rank">02</div>
+                    <div class="trending-content">
+                        <h4>Claude AI</h4>
+                        <p>Advanced AI Assistant</p>
+                        <div class="trending-growth">↑ 245% this week</div>
+                    </div>
+                    <a href="#" class="trending-visit">Visit</a>
+                </div>
+
+                <div class="trending-card">
+                    <div class="trending-rank">03</div>
+                    <div class="trending-content">
+                        <h4>Figma</h4>
+                        <p>Design Tool</p>
+                        <div class="trending-growth">↑ 156% this week</div>
+                    </div>
+                    <a href="#" class="trending-visit">Visit</a>
+                </div>
+
+                <div class="trending-card">
+                    <div class="trending-rank">04</div>
+                    <div class="trending-content">
+                        <h4>GitHub</h4>
+                        <p>Developer Platform</p>
+                        <div class="trending-growth">↑ 128% this week</div>
+                    </div>
+                    <a href="#" class="trending-visit">Visit</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">💬 What Users Say</h2>
+                <p class="section-subtitle">Join thousands of happy users</p>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"WebsiteHub saved me hours every week. I don't know how I managed without it!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">BN</div>
+                        <div>
+                            <div class="author-name">B Narzary</div>
+                            <div class="author-role">Entrepreneur</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Finally, all the tools I need in one place. Highly recommended for professionals."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">AB</div>
+                        <div>
+                            <div class="author-name">A Borah</div>
+                            <div class="author-role">Entrepreneur</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Best curated resource collection I've found. Clean design, easy to use!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">DP</div>
+                        <div>
+                            <div class="author-name">D Prasad</div>
+                            <div class="author-role">Developer</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Contact Section -->
-    <section id="contact" class="contact">
+    <section id="about" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Have suggestions? We'd love to hear from you</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <span class="contact-label">Email</span>
+                            <span>aknalok.in@gmail.com</span>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-heart"></i>
+                        <div>
+                            <span class="contact-label">Support Us</span>
+                            <a href="https://payments.cashfree.com/forms/donationakan" target="_blank">Donate to Help Us Grow</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="submission-panel">
+                    <h3 class="submission-title">Submit What You Want to Say</h3>
+                    <p class="submission-subtitle">Share a useful website or message and we will review it.</p>
+                    <form id="userSuggestionForm" class="submission-form">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="suggestName">Your Name</label>
+                                <input id="suggestName" name="name" type="text" placeholder="Enter your name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="suggestEmail">Email (optional)</label>
+                                <input id="suggestEmail" name="email" type="email" placeholder="you@example.com">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="suggestWebsite">Website URL (optional)</label>
+                            <input id="suggestWebsite" name="website" type="url" placeholder="https://example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="suggestMessage">What do you want to say?</label>
+                            <textarea id="suggestMessage" name="message" rows="5" placeholder="Write your suggestion or message..." required></textarea>
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="submit-btn form-submit-btn">
+                                <i class="fas fa-paper-plane"></i>
+                                Submit Suggestion
+                            </button>
+                            <p id="submissionStatus" class="submission-status" aria-live="polite"></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modern Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <i class="fas fa-cube"></i>
+                        <span>WebsiteHub</span>
+                    </div>
+                    <p>Your gateway to the web's best tools and resources.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.facebook.com/share/1DadNdRXnn/" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.linkedin.com/in/alok-kumar-narzary-b2b902268" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#explore">Explore</a></li>
+                        <li><a href="#featured">Featured</a></li>
+                        <li><a href="#about">About</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="#" onclick="filterByCategory('ai')">AI Tools</a></li>
+                        <li><a href="#" onclick="filterByCategory('developer')">Developer Tools</a></li>
+                        <li><a href="#" onclick="filterByCategory('education')">Education</a></li>
+                        <li><a href="#" onclick="filterByCategory('jobs')">Jobs</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Newsletter</h4>
+                    <p>Get the best tools delivered to your inbox</p>
+                    <div class="newsletter-signup">
+                        <input type="email" placeholder="Your email" />
+                        <button>Subscribe</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 WebsiteHub. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms-of-service.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Contact Section (Legacy) -->
+    <section id="contact" class="contact" style="display: none;">
         <div class="container">
             <h2 class="section-title">Contact Us</h2>
             <div class="contact-content">
@@ -2290,10 +2727,10 @@
                         <a href="mailto:aknalok.in@gmail.com" class="profile-link">
                             <i class="fas fa-envelope"></i>
                         </a>
-                        <a href="#" class="profile-link">
+                        <a href="https://github.com/alokkrnarzay" class="profile-link" target="_blank" rel="noopener noreferrer">
                             <i class="fab fa-github"></i>
                         </a>
-                        <a href="#" class="profile-link">
+                        <a href="https://www.linkedin.com/in/alok-kumar-narzary-b2b902268" class="profile-link" target="_blank" rel="noopener noreferrer">
                             <i class="fab fa-linkedin"></i>
                         </a>
                     </div>
