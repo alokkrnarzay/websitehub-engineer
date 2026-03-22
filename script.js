@@ -281,11 +281,13 @@ function filterWebsites(category, searchTerm) {
         const cardCategory = card.getAttribute('data-category');
         const cardTitle = card.querySelector('.card-title').textContent.toLowerCase();
         const cardDescription = card.querySelector('.card-description').textContent.toLowerCase();
+        const searchText = getCardSearchText(card);
         
         const matchesCategory = category === 'all' || cardCategory === category;
         const matchesSearch = searchTerm === '' || 
             cardTitle.includes(searchTerm) || 
-            cardDescription.includes(searchTerm);
+            cardDescription.includes(searchTerm) ||
+            searchText.includes(normalizeSearchText(searchTerm));
         
         if (matchesCategory && matchesSearch) {
             setTimeout(() => {
@@ -310,6 +312,62 @@ function filterWebsites(category, searchTerm) {
     setTimeout(() => {
         updateNoResultsMessage();
     }, 400);
+}
+
+function normalizeSearchText(text) {
+    return (text || '')
+        .toLowerCase()
+        .replace(/[^a-z0-9\s]/g, ' ')
+        .replace(/\s+/g, ' ')
+        .trim();
+}
+
+function buildAcronym(text) {
+    return normalizeSearchText(text)
+        .split(' ')
+        .filter(Boolean)
+        .map(word => word[0])
+        .join('');
+}
+
+function getInstitutionAliases(title) {
+    const aliases = [];
+    const normalized = normalizeSearchText(title);
+
+    if (normalized.startsWith('indian institute of technology')) {
+        const location = normalized.replace('indian institute of technology', '').trim();
+        if (location) aliases.push(`iit ${location}`);
+    }
+
+    if (normalized.startsWith('national institute of technology')) {
+        const location = normalized.replace('national institute of technology', '').trim();
+        if (location) aliases.push(`nit ${location}`);
+    }
+
+    if (normalized.includes('visvesvaraya national institute of technology nagpur')) {
+        aliases.push('vnit nagpur', 'nit nagpur', 'iit nagpur');
+    }
+
+    if (normalized.includes('all india institute of medical sciences')) {
+        const location = normalized.replace('all india institute of medical sciences', '').trim();
+        aliases.push('aiims');
+        if (location) aliases.push(`aiims ${location}`);
+    }
+
+    return aliases;
+}
+
+function getCardSearchText(card) {
+    const title = card.querySelector('.card-title')?.textContent || '';
+    const description = card.querySelector('.card-description')?.textContent || '';
+    const titleNormalized = normalizeSearchText(title);
+    const descriptionNormalized = normalizeSearchText(description);
+    const acronym = buildAcronym(title);
+    const institutionAliases = getInstitutionAliases(title);
+
+    return [titleNormalized, descriptionNormalized, acronym, ...institutionAliases]
+        .filter(Boolean)
+        .join(' ');
 }
 
 // =========================================================

@@ -4,21 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WebsiteHub - Discover Curated Tools & Resources</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="shortcut icon" href="favicon.svg">
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Premium Notification Bar -->
-    <div class="notification-banner" id="notificationBanner">
-        <div class="notification-content">
-            <div class="notification-badge">✨ NEW</div>
-            <span class="notification-text">Join 5,000+ users discovering premium tools daily</span>
-            <button class="notification-close" onclick="closeNotification()">
-                <i class="fas fa-times"></i>
-            </button>
-        </div>
-    </div>
+    <aside class="notice-corner" aria-label="Site notice">
+        <span class="notice-pill">Notice</span>
+        <p>Bhai, yahan Bhagwan se baat karne ki website bhi mil sakti hai, search karke dekho.</p>
+    </aside>
 
     <!-- Enhanced Navigation Bar -->
     <nav class="navbar" id="navbar">
@@ -38,23 +34,20 @@
                     <a href="#categories" class="nav-link">Categories</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#featured" class="nav-link">Featured</a>
-                </li>
-                <li class="nav-item">
                     <a href="#about" class="nav-link">About</a>
                 </li>
                 <li class="nav-item nav-item-mobile-cta">
-                    <a href="#about" class="submit-btn submit-btn-mobile">
+                    <a href="#contact" class="submit-btn submit-btn-mobile">
                         <i class="fas fa-plus"></i>
-                        Submit Website
+                        Contact Us
                     </a>
                 </li>
             </ul>
 
             <div class="nav-actions">
-                <a href="#about" class="submit-btn" aria-label="Submit website">
+                <a href="#contact" class="submit-btn" aria-label="Contact us">
                     <i class="fas fa-plus"></i>
-                    Submit Website
+                    Contact Us
                 </a>
             </div>
 
@@ -116,76 +109,6 @@
                     </div>
                 </div>
             </div>
-
-            <!-- Trust Indicators -->
-            <div class="trust-indicators">
-                <div class="trust-item">
-                    <div class="trust-number">5K+</div>
-                    <div class="trust-label">Active Users</div>
-                </div>
-                <div class="trust-item">
-                    <div class="trust-number">500+</div>
-                    <div class="trust-label">Curated Tools</div>
-                </div>
-                <div class="trust-item">
-                    <div class="trust-number">50M+</div>
-                    <div class="trust-label">Visits/Month</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Featured Section -->
-    <section id="featured" class="featured-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">✨ Featured This Week</h2>
-                <p class="section-subtitle">Handpicked by our team</p>
-            </div>
-
-            <div class="featured-grid">
-                <div class="featured-card premium">
-                    <div class="featured-badge">Top Pick</div>
-                    <div class="featured-icon">
-                        <i class="fas fa-brain"></i>
-                    </div>
-                    <h3>ChatGPT</h3>
-                    <p>Advanced AI chatbot for productivity and creative tasks</p>
-                    <div class="featured-meta">
-                        <span class="tag">AI</span>
-                        <span class="tag">Trending</span>
-                    </div>
-                    <a href="#" class="featured-btn">Explore</a>
-                </div>
-
-                <div class="featured-card">
-                    <div class="featured-badge">Popular</div>
-                    <div class="featured-icon">
-                        <i class="fas fa-palette"></i>
-                    </div>
-                    <h3>Figma</h3>
-                    <p>Collaborative design platform for teams</p>
-                    <div class="featured-meta">
-                        <span class="tag">Design</span>
-                        <span class="tag">Pro</span>
-                    </div>
-                    <a href="#" class="featured-btn">Explore</a>
-                </div>
-
-                <div class="featured-card">
-                    <div class="featured-badge">Rising</div>
-                    <div class="featured-icon">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <h3>GitHub</h3>
-                    <p>Developer platform for version control</p>
-                    <div class="featured-meta">
-                        <span class="tag">Dev Tools</span>
-                        <span class="tag">Free</span>
-                    </div>
-                    <a href="#" class="featured-btn">Explore</a>
-                </div>
-            </div>
         </div>
     </section>
 
@@ -204,7 +127,9 @@
                 <button class="tab-btn" data-category="jobs">Jobs & Career</button>
                 <button class="tab-btn" data-category="education">Education</button>
                 <button class="tab-btn" data-category="ai">AI Tools</button>
-                <button class="tab-btn" data-category="daily">Daily Useful</button>
+                <button class="tab-btn" data-category="shopping">Shopping</button>
+                <button class="tab-btn" data-category="social">Social</button>
+                <button class="tab-btn" data-category="entertainment">Entertainment</button>
                 <button class="tab-btn" data-category="developer">Developer</button>
             </div>
             
@@ -617,6 +542,15 @@
                 </div>
 
                 <!-- Jobs & Career -->
+                <div class="website-card" data-category="jobs">
+                    <div class="card-icon">
+                        <i class="fas fa-bullhorn"></i>
+                    </div>
+                    <h3 class="card-title">Daily Job Update</h3>
+                    <p class="card-description">Latest government and private job notifications, exam alerts, and admit card updates.</p>
+                    <a href="https://www.freejobalert.com/" target="_blank" class="card-button">Visit Website</a>
+                </div>
+
                 <div class="website-card" data-category="jobs">
                     <div class="card-icon">
                         <i class="fas fa-university"></i>
@@ -1111,252 +1045,1865 @@
                     <p class="card-description">Central Selection Board tender job portal for government contracts and recruitment.</p>
                     <a href="https://portal.centralselectionboard.com/" target="_blank" class="card-button">Visit Portal</a>
                 </div>
-
-                <!-- Education & Learning -->
+                                <!-- Education & Learning (NIRF Top 200) -->
                 <div class="website-card" data-category="education">
                     <div class="card-icon">
-                        <i class="fas fa-book-open"></i>
+                        <i class="fas fa-graduation-cap"></i>
                     </div>
-                    <h3 class="card-title">NCERT</h3>
-                    <p class="card-description">National Council of Educational Research and Training - official textbooks and curriculum.</p>
-                    <a href="https://ncert.nic.in/" target="_blank" class="card-button">Visit Website</a>
-                </div>
-
-                <div class="website-card" data-category="education">
-                    <div class="card-icon">
-                        <i class="fas fa-laptop-code"></i>
-                    </div>
-                    <h3 class="card-title">SWAYAM</h3>
-                    <p class="card-description">Study Webs of Active-Learning for Young Aspiring Minds - online courses platform.</p>
-                    <a href="https://swayam.gov.in/" target="_blank" class="card-button">Visit Website</a>
-                </div>
-
-                <div class="website-card" data-category="education">
-                    <div class="card-icon">
-                        <i class="fas fa-library"></i>
-                    </div>
-                    <h3 class="card-title">National Digital Library</h3>
-                    <p class="card-description">Digital repository of educational content and learning resources.</p>
-                    <a href="https://ndl.iitkgp.ac.in/" target="_blank" class="card-button">Visit Website</a>
-                </div>
-
-                <div class="website-card" data-category="education">
-                    <div class="card-icon">
-                        <i class="fas fa-chalkboard-teacher"></i>
-                    </div>
-                    <h3 class="card-title">DIKSHA</h3>
-                    <p class="card-description">Digital Infrastructure for Knowledge Sharing - learning platform for teachers and students.</p>
-                    <a href="https://diksha.gov.in/" target="_blank" class="card-button">Visit Website</a>
-                </div>
-
-                <div class="website-card" data-category="education">
-                    <div class="card-icon">
-                        <i class="fas fa-tablet-alt"></i>
-                    </div>
-                    <h3 class="card-title">ePathshala</h3>
-                    <p class="card-description">Digital learning platform with educational e-books and interactive content.</p>
-                    <a href="https://epathshala.nic.in/" target="_blank" class="card-button">Visit Website</a>
-                </div>
-
-                <div class="website-card" data-category="education">
-                    <div class="card-icon">
-                        <i class="fas fa-microscope"></i>
-                    </div>
-                    <h3 class="card-title">NPTEL</h3>
-                    <p class="card-description">National Programme on Technology Enhanced Learning - engineering and science courses.</p>
-                    <a href="https://nptel.ac.in/" target="_blank" class="card-button">Visit Website</a>
-                </div>
-
-                <div class="website-card" data-category="education">
-                    <div class="card-icon">
-                        <i class="fas fa-university"></i>
-                    </div>
-                    <h3 class="card-title">UGC</h3>
-                    <p class="card-description">University Grants Commission - higher education policies and university information.</p>
-                    <a href="https://ugc.gov.in/" target="_blank" class="card-button">Visit Website</a>
-                </div>
-
-                <div class="website-card" data-category="education">
-                    <div class="card-icon">
-                        <i class="fas fa-cogs"></i>
-                    </div>
-                    <h3 class="card-title">AICTE</h3>
-                    <p class="card-description">All India Council for Technical Education - technical education and engineering colleges.</p>
-                    <a href="https://aicte-india.org/" target="_blank" class="card-button">Visit Website</a>
-                </div>
-
-                <div class="website-card" data-category="education">
-                    <div class="card-icon">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <h3 class="card-title">GeeksforGeeks</h3>
-                    <p class="card-description">Programming tutorials, interview preparation, and coding practice platform.</p>
-                    <a href="https://geeksforgeeks.org/" target="_blank" class="card-button">Visit Website</a>
-                </div>
-
-                <div class="website-card" data-category="education">
-                    <div class="card-icon">
-                        <i class="fas fa-puzzle-piece"></i>
-                    </div>
-                    <h3 class="card-title">LeetCode</h3>
-                    <p class="card-description">Coding challenges and algorithm practice for technical interviews.</p>
-                    <a href="https://leetcode.com/" target="_blank" class="card-button">Visit Website</a>
-                </div>
-
-                <div class="website-card" data-category="education">
-                    <div class="card-icon">
-                        <i class="fas fa-trophy"></i>
-                    </div>
-                    <h3 class="card-title">HackerRank</h3>
-                    <p class="card-description">Programming challenges, coding competitions, and skill assessment platform.</p>
-                    <a href="https://hackerrank.com/" target="_blank" class="card-button">Visit Website</a>
-                </div>
-
-                <div class="website-card" data-category="education">
-                    <div class="card-icon">
-                        <i class="fas fa-utensils"></i>
-                    </div>
-                    <h3 class="card-title">CodeChef</h3>
-                    <p class="card-description">Competitive programming platform with contests and coding challenges.</p>
-                    <a href="https://codechef.com/" target="_blank" class="card-button">Visit Website</a>
-                </div>
-
-                <div class="website-card" data-category="education">
-                    <div class="card-icon">
-                        <i class="fas fa-laptop-code"></i>
-                    </div>
-                    <h3 class="card-title">W3Schools</h3>
-                    <p class="card-description">Web development tutorials and references for HTML, CSS, JavaScript and more.</p>
-                    <a href="https://w3schools.com/" target="_blank" class="card-button">Visit Website</a>
-                </div>
-
-                <div class="website-card" data-category="education">
-                    <div class="card-icon">
-                        <i class="fas fa-play-circle"></i>
-                    </div>
-                    <h3 class="card-title">PW</h3>
-                    <p class="card-description">Physics Wallah - comprehensive online learning platform for competitive exams.</p>
-                    <a href="https://www.pw.live/" target="_blank" class="card-button">Visit Website</a>
+                    <h3 class="card-title">Indian Institute of Technology Madras</h3>
+                    <p class="card-description">Official details for Indian Institute of Technology Madras.</p>
+                    <a href="https://www.iitm.ac.in" target="_blank" class="card-button">Official Site</a>
                 </div>
 
                 <div class="website-card" data-category="education">
                     <div class="card-icon">
                         <i class="fas fa-graduation-cap"></i>
                     </div>
-                    <h3 class="card-title">Coursera</h3>
-                    <p class="card-description">Online courses from top universities and companies worldwide.</p>
-                    <a href="https://coursera.org/" target="_blank" class="card-button">Visit Website</a>
-                </div>
-
-                <div class="website-card" data-category="education">
-                    <div class="card-icon">
-                        <i class="fas fa-search"></i>
-                    </div>
-                    <h3 class="card-title">Google Scholar</h3>
-                    <p class="card-description">Academic search engine for scholarly literature, research papers, and citations.</p>
-                    <a href="https://scholar.google.com/" target="_blank" class="card-button">Visit Website</a>
-                </div>
-
-                <div class="website-card" data-category="education">
-                    <div class="card-icon">
-                        <i class="fas fa-globe"></i>
-                    </div>
-                    <h3 class="card-title">Wikipedia</h3>
-                    <p class="card-description">Free online encyclopedia with articles on virtually every topic.</p>
-                    <a href="https://wikipedia.org/" target="_blank" class="card-button">Visit Website</a>
-                </div>
-
-                <div class="website-card" data-category="education">
-                    <div class="card-icon">
-                        <i class="fas fa-archive"></i>
-                    </div>
-                    <h3 class="card-title">Internet Archive</h3>
-                    <p class="card-description">Digital library with free access to books, movies, music, and websites.</p>
-                    <a href="https://archive.org/" target="_blank" class="card-button">Visit Website</a>
-                </div>
-
-                <div class="website-card" data-category="education">
-                    <div class="card-icon">
-                        <i class="fas fa-video"></i>
-                    </div>
-                    <h3 class="card-title">Udemy</h3>
-                    <p class="card-description">Online learning platform with courses on technology, business, and personal development.</p>
-                    <a href="https://udemy.com/" target="_blank" class="card-button">Visit Website</a>
-                </div>
-
-                <div class="website-card" data-category="education">
-                    <div class="card-icon">
-                        <i class="fab fa-google"></i>
-                    </div>
-                    <h3 class="card-title">Google Learning</h3>
-                    <p class="card-description">Professional development and digital skills training programs from Google.</p>
-                    <a href="https://grow.google/" target="_blank" class="card-button">Visit Website</a>
-                </div>
-
-                <div class="website-card" data-category="education">
-                    <div class="card-icon">
-                        <i class="fab fa-microsoft"></i>
-                    </div>
-                    <h3 class="card-title">Microsoft Learn</h3>
-                    <p class="card-description">Free interactive learning platform for Microsoft technologies and Azure.</p>
-                    <a href="https://learn.microsoft.com/" target="_blank" class="card-button">Visit Website</a>
-                </div>
-
-                <div class="website-card" data-category="education">
-                    <div class="card-icon">
-                        <i class="fab fa-aws"></i>
-                    </div>
-                    <h3 class="card-title">Amazon AWS Training</h3>
-                    <p class="card-description">Cloud computing training and certification programs from Amazon Web Services.</p>
-                    <a href="https://aws.amazon.com/training/" target="_blank" class="card-button">Visit Website</a>
-                </div>
-
-                <div class="website-card" data-category="education">
-                    <div class="card-icon">
-                        <i class="fas fa-brain"></i>
-                    </div>
-                    <h3 class="card-title">IBM SkillsBuild</h3>
-                    <p class="card-description">Free education platform offering courses in technology and professional skills.</p>
-                    <a href="https://skillsbuild.org/" target="_blank" class="card-button">Visit Website</a>
-                </div>
-
-                <div class="website-card" data-category="education">
-                    <div class="card-icon">
-                        <i class="fab fa-meta"></i>
-                    </div>
-                    <h3 class="card-title">Meta Blueprint</h3>
-                    <p class="card-description">Digital marketing and advertising education from Meta (Facebook).</p>
-                    <a href="https://www.facebook.com/business/learn/" target="_blank" class="card-button">Visit Website</a>
+                    <h3 class="card-title">Indian Institute of Science, Bengaluru</h3>
+                    <p class="card-description">Official details for Indian Institute of Science, Bengaluru.</p>
+                    <a href="https://www.iisc.ac.in" target="_blank" class="card-button">Official Site</a>
                 </div>
 
                 <div class="website-card" data-category="education">
                     <div class="card-icon">
                         <i class="fas fa-graduation-cap"></i>
                     </div>
-                    <h3 class="card-title">BYJU'S</h3>
-                    <p class="card-description">India's leading online learning platform for K-12 and competitive exams.</p>
-                    <a href="https://byjus.com/" target="_blank" class="card-button">Visit Website</a>
+                    <h3 class="card-title">Indian Institute of Technology Bombay</h3>
+                    <p class="card-description">Official details for Indian Institute of Technology Bombay.</p>
+                    <a href="https://www.iitb.ac.in" target="_blank" class="card-button">Official Site</a>
                 </div>
 
                 <div class="website-card" data-category="education">
                     <div class="card-icon">
-                        <i class="fas fa-book-reader"></i>
+                        <i class="fas fa-graduation-cap"></i>
                     </div>
-                    <h3 class="card-title">Unacademy</h3>
-                    <p class="card-description">India's largest learning platform for competitive exam preparation.</p>
-                    <a href="https://unacademy.com/" target="_blank" class="card-button">Visit Website</a>
+                    <h3 class="card-title">Indian Institute of Technology Delhi</h3>
+                    <p class="card-description">Official details for Indian Institute of Technology Delhi.</p>
+                    <a href="https://home.iitd.ac.in" target="_blank" class="card-button">Official Site</a>
                 </div>
 
                 <div class="website-card" data-category="education">
                     <div class="card-icon">
-                        <i class="fas fa-university"></i>
+                        <i class="fas fa-graduation-cap"></i>
                     </div>
-                    <h3 class="card-title">SWAYAM</h3>
-                    <p class="card-description">Government of India's education platform offering free online courses.</p>
-                    <a href="https://swayam.gov.in/" target="_blank" class="card-button">Visit Website</a>
+                    <h3 class="card-title">Indian Institute of Technology Kanpur</h3>
+                    <p class="card-description">Official details for Indian Institute of Technology Kanpur.</p>
+                    <a href="https://www.iitk.ac.in" target="_blank" class="card-button">Official Site</a>
                 </div>
 
-                <!-- AI Tools -->
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Indian Institute of Technology Kharagpur</h3>
+                    <p class="card-description">Official details for Indian Institute of Technology Kharagpur.</p>
+                    <a href="https://www.iitkgp.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">All India Institute of Medical Sciences Delhi</h3>
+                    <p class="card-description">Official details for All India Institute of Medical Sciences Delhi.</p>
+                    <a href="https://www.aiims.edu" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Indian Institute of Technology Roorkee</h3>
+                    <p class="card-description">Official details for Indian Institute of Technology Roorkee.</p>
+                    <a href="https://www.iitr.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Indian Institute of Technology Guwahati</h3>
+                    <p class="card-description">Official details for Indian Institute of Technology Guwahati.</p>
+                    <a href="https://www.iitg.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Jawaharlal Nehru University</h3>
+                    <p class="card-description">Official details for Jawaharlal Nehru University.</p>
+                    <a href="https://www.jnu.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Banaras Hindu University</h3>
+                    <p class="card-description">Official details for Banaras Hindu University.</p>
+                    <a href="https://www.bhu.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Indian Institute of Technology Hyderabad</h3>
+                    <p class="card-description">Official details for Indian Institute of Technology Hyderabad.</p>
+                    <a href="https://www.iith.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Jamia Millia Islamia</h3>
+                    <p class="card-description">Official details for Jamia Millia Islamia.</p>
+                    <a href="https://www.jmi.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Manipal Academy of Higher Education, Manipal</h3>
+                    <p class="card-description">Official details for Manipal Academy of Higher Education, Manipal.</p>
+                    <a href="https://www.manipal.edu" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">University of Delhi</h3>
+                    <p class="card-description">Official details for University of Delhi.</p>
+                    <a href="https://www.du.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Aligarh Muslim University</h3>
+                    <p class="card-description">Official details for Aligarh Muslim University.</p>
+                    <a href="https://www.amu.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Jadavpur University</h3>
+                    <p class="card-description">Official details for Jadavpur University.</p>
+                    <a href="https://www.jaduniv.edu.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Amrita Vishwa Vidyapeetham</h3>
+                    <p class="card-description">Official details for Amrita Vishwa Vidyapeetham.</p>
+                    <a href="https://www.amrita.edu" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Vellore Institute of Technology</h3>
+                    <p class="card-description">Official details for Vellore Institute of Technology.</p>
+                    <a href="https://vit.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Anna University</h3>
+                    <p class="card-description">Official details for Anna University.</p>
+                    <a href="https://www.annauniv.edu" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">S.R.M. Institute of Science and Technology</h3>
+                    <p class="card-description">Official details for S.R.M. Institute of Science and Technology.</p>
+                    <a href="https://www.srmist.edu.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Saveetha Institute of Medical and Technical Sciences</h3>
+                    <p class="card-description">Official details for Saveetha Institute of Medical and Technical Sciences.</p>
+                    <a href="https://www.saveetha.com" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Birla Institute of Technology and Science, Pilani</h3>
+                    <p class="card-description">Official details for Birla Institute of Technology and Science, Pilani.</p>
+                    <a href="https://www.bits-pilani.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Siksha O Anusandhan</h3>
+                    <p class="card-description">Official details for Siksha O Anusandhan.</p>
+                    <a href="https://www.soa.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">University of Hyderabad</h3>
+                    <p class="card-description">Official details for University of Hyderabad.</p>
+                    <a href="https://www.uohyd.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Calcutta University</h3>
+                    <p class="card-description">Official details for Calcutta University.</p>
+                    <a href="https://www.caluniv.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Homi Bhabha National Institute</h3>
+                    <p class="card-description">Official details for Homi Bhabha National Institute.</p>
+                    <a href="https://www.hbni.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Kalinga Institute of Industrial Technology</h3>
+                    <p class="card-description">Official details for Kalinga Institute of Industrial Technology.</p>
+                    <a href="https://kiit.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Indian Institute of Technology Gandhinagar</h3>
+                    <p class="card-description">Official details for Indian Institute of Technology Gandhinagar.</p>
+                    <a href="https://iitgn.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Indian Institute of Technology (Banaras Hindu University) Varanasi</h3>
+                    <p class="card-description">Official details for Indian Institute of Technology (Banaras Hindu University) Varanasi.</p>
+                    <a href="https://www.iitbhu.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">National Institute of Technology Tiruchirappalli</h3>
+                    <p class="card-description">Official details for National Institute of Technology Tiruchirappalli.</p>
+                    <a href="https://www.nitt.edu" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Chandigarh University</h3>
+                    <p class="card-description">Official details for Chandigarh University.</p>
+                    <a href="https://www.cuchd.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Indian Institute of Technology Indore</h3>
+                    <p class="card-description">Official details for Indian Institute of Technology Indore.</p>
+                    <a href="https://www.iiti.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">National Institute of Technology Rourkela</h3>
+                    <p class="card-description">Official details for National Institute of Technology Rourkela.</p>
+                    <a href="https://www.nitrkl.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Indian Institute of Technology (Indian School of Mines) Dhanbad</h3>
+                    <p class="card-description">Official details for Indian Institute of Technology (Indian School of Mines) Dhanbad.</p>
+                    <a href="https://www.iitism.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">JSS Academy of Higher Education and Research</h3>
+                    <p class="card-description">Official details for JSS Academy of Higher Education and Research.</p>
+                    <a href="https://jssuni.edu.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Savitribai Phule Pune University</h3>
+                    <p class="card-description">Official details for Savitribai Phule Pune University.</p>
+                    <a href="https://www.unipune.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Kerala University</h3>
+                    <p class="card-description">Official details for Kerala University.</p>
+                    <a href="https://www.keralauniversity.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Jawaharlal Institute of Post Graduate Medical Education and Research</h3>
+                    <p class="card-description">Official details for Jawaharlal Institute of Post Graduate Medical Education and Research.</p>
+                    <a href="https://jipmer.edu.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Koneru Lakshmaiah Education Foundation University (K L College of Engineering)</h3>
+                    <p class="card-description">Official details for Koneru Lakshmaiah Education Foundation University (K L College of Engineering).</p>
+                    <a href="https://www.kluniversity.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Andhra University</h3>
+                    <p class="card-description">Official details for Andhra University.</p>
+                    <a href="https://www.andhrauniversity.edu.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Indian Institute of Science Education and Research Pune</h3>
+                    <p class="card-description">Official details for Indian Institute of Science Education and Research Pune.</p>
+                    <a href="https://www.iiserpune.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Thapar Institute of Engineering and Technology (Deemed-to-be-university)</h3>
+                    <p class="card-description">Official details for Thapar Institute of Engineering and Technology (Deemed-to-be-university).</p>
+                    <a href="https://www.thapar.edu" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Bharathiar University</h3>
+                    <p class="card-description">Official details for Bharathiar University.</p>
+                    <a href="https://b-u.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Lovely Professional University</h3>
+                    <p class="card-description">Official details for Lovely Professional University.</p>
+                    <a href="https://www.lpu.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">National Institute of Technology Karnataka, Surathkal</h3>
+                    <p class="card-description">Official details for National Institute of Technology Karnataka, Surathkal.</p>
+                    <a href="https://www.nitk.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Shanmugha Arts Science Technology and Research Academy</h3>
+                    <p class="card-description">Official details for Shanmugha Arts Science Technology and Research Academy.</p>
+                    <a href="https://www.sastra.edu" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Indian Institute of Technology Ropar</h3>
+                    <p class="card-description">Official details for Indian Institute of Technology Ropar.</p>
+                    <a href="https://www.iitrpr.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Amity University</h3>
+                    <p class="card-description">Official details for Amity University.</p>
+                    <a href="https://www.amity.edu" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Kalasalingam Academy of Research and Education</h3>
+                    <p class="card-description">Official details for Kalasalingam Academy of Research and Education.</p>
+                    <a href="https://www.kalasalingam.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Cochin University of Science and Technology</h3>
+                    <p class="card-description">Official details for Cochin University of Science and Technology.</p>
+                    <a href="https://www.cusat.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Symbiosis International</h3>
+                    <p class="card-description">Official details for Symbiosis International.</p>
+                    <a href="https://www.siu.edu.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">National Institute of Technology Warangal</h3>
+                    <p class="card-description">Official details for National Institute of Technology Warangal.</p>
+                    <a href="https://www.nitw.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">National Institute of Technology Calicut</h3>
+                    <p class="card-description">Official details for National Institute of Technology Calicut.</p>
+                    <a href="https://nitc.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Bharathidasan University</h3>
+                    <p class="card-description">Official details for Bharathidasan University.</p>
+                    <a href="https://www.bdu.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Institute of Chemical Technology</h3>
+                    <p class="card-description">Official details for Institute of Chemical Technology.</p>
+                    <a href="https://www.ictmumbai.edu.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Gauhati University</h3>
+                    <p class="card-description">Official details for Gauhati University.</p>
+                    <a href="https://www.gauhati.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Babasaheb Bhimrao Ambedkar University</h3>
+                    <p class="card-description">Official details for Babasaheb Bhimrao Ambedkar University.</p>
+                    <a href="https://www.bbau.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">UPES</h3>
+                    <p class="card-description">Official details for UPES.</p>
+                    <a href="https://www.upes.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Panjab University</h3>
+                    <p class="card-description">Official details for Panjab University.</p>
+                    <a href="https://puchd.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Indian Institute of Science Education and Research Kolkata</h3>
+                    <p class="card-description">Official details for Indian Institute of Science Education and Research Kolkata.</p>
+                    <a href="https://www.iiserkol.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Jamia Hamdard</h3>
+                    <p class="card-description">Official details for Jamia Hamdard.</p>
+                    <a href="https://www.jamiahamdard.edu" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Dr. D. Y. Patil Vidyapeeth</h3>
+                    <p class="card-description">Official details for Dr. D. Y. Patil Vidyapeeth.</p>
+                    <a href="https://dpu.edu.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Indian Institute of Science Education and Research Mohali</h3>
+                    <p class="card-description">Official details for Indian Institute of Science Education and Research Mohali.</p>
+                    <a href="https://www.iisermohali.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">University of Madras</h3>
+                    <p class="card-description">Official details for University of Madras.</p>
+                    <a href="https://www.unom.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Delhi Technological University</h3>
+                    <p class="card-description">Official details for Delhi Technological University.</p>
+                    <a href="https://dtu.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Mahatma Gandhi University</h3>
+                    <p class="card-description">Official details for Mahatma Gandhi University.</p>
+                    <a href="https://www.mgu.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Indian Institute of Technology Jodhpur</h3>
+                    <p class="card-description">Official details for Indian Institute of Technology Jodhpur.</p>
+                    <a href="https://iitj.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">University of Kashmir</h3>
+                    <p class="card-description">Official details for University of Kashmir.</p>
+                    <a href="https://www.uok.edu.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Osmania University</h3>
+                    <p class="card-description">Official details for Osmania University.</p>
+                    <a href="https://www.osmania.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Datta Meghe Institute of Higher Education and Research</h3>
+                    <p class="card-description">Official details for Datta Meghe Institute of Higher Education and Research.</p>
+                    <a href="https://www.dmimsu.edu.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Indian Institute of Technology Mandi</h3>
+                    <p class="card-description">Official details for Indian Institute of Technology Mandi.</p>
+                    <a href="https://www.iitmandi.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Indian Institute of Technology Patna</h3>
+                    <p class="card-description">Official details for Indian Institute of Technology Patna.</p>
+                    <a href="https://www.iitp.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">All India Institute of Medical Sciences Rishikesh</h3>
+                    <p class="card-description">Official details for All India Institute of Medical Sciences Rishikesh.</p>
+                    <a href="https://aiimsrishikesh.edu.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Indian Statistical Institute, Kolkata</h3>
+                    <p class="card-description">Official details for Indian Statistical Institute, Kolkata.</p>
+                    <a href="https://www.isical.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Alagappa University</h3>
+                    <p class="card-description">Official details for Alagappa University.</p>
+                    <a href="https://www.alagappauniversity.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Visvesvaraya National Institute of Technology Nagpur</h3>
+                    <p class="card-description">Official details for Visvesvaraya National Institute of Technology Nagpur.</p>
+                    <a href="https://vnit.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Indian Institute of Science Education and Research Bhopal</h3>
+                    <p class="card-description">Official details for Indian Institute of Science Education and Research Bhopal.</p>
+                    <a href="https://www.iiserb.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Graphic Era University</h3>
+                    <p class="card-description">Official details for Graphic Era University.</p>
+                    <a href="https://www.geu.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Punjab Agricultural University</h3>
+                    <p class="card-description">Official details for Punjab Agricultural University.</p>
+                    <a href="https://www.pau.edu" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Sri Sivasubramaniya Nadar College of Engineering</h3>
+                    <p class="card-description">Official details for Sri Sivasubramaniya Nadar College of Engineering.</p>
+                    <a href="https://www.ssn.edu.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Malaviya National Institute of Technology</h3>
+                    <p class="card-description">Official details for Malaviya National Institute of Technology.</p>
+                    <a href="https://www.mnit.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">All India Institute of Medical Sciences Jodhpur</h3>
+                    <p class="card-description">Official details for All India Institute of Medical Sciences Jodhpur.</p>
+                    <a href="https://www.aiimsjodhpur.edu.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">SVKM`s Narsee Monjee Institute of Management Studies</h3>
+                    <p class="card-description">Official details for SVKM`s Narsee Monjee Institute of Management Studies.</p>
+                    <a href="https://www.nmims.edu" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Sathyabama Institute of Science and Technology</h3>
+                    <p class="card-description">Official details for Sathyabama Institute of Science and Technology.</p>
+                    <a href="https://www.sathyabama.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Mysore University</h3>
+                    <p class="card-description">Official details for Mysore University.</p>
+                    <a href="https://uni-mysore.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">University of Jammu</h3>
+                    <p class="card-description">Official details for University of Jammu.</p>
+                    <a href="https://www.jammuuniversity.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">King George`s Medical University</h3>
+                    <p class="card-description">Official details for King George`s Medical University.</p>
+                    <a href="https://www.kgmu.org" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Shoolini University of Biotechnology and Management Sciences</h3>
+                    <p class="card-description">Official details for Shoolini University of Biotechnology and Management Sciences.</p>
+                    <a href="https://shooliniuniversity.com" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Christ University</h3>
+                    <p class="card-description">Official details for Christ University.</p>
+                    <a href="https://christuniversity.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Bharath Institute of Higher Education and Research</h3>
+                    <p class="card-description">Official details for Bharath Institute of Higher Education and Research.</p>
+                    <a href="https://www.bharathuniv.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">National Institute of Technology Silchar</h3>
+                    <p class="card-description">Official details for National Institute of Technology Silchar.</p>
+                    <a href="https://www.nits.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">National Institute of Technology Durgapur</h3>
+                    <p class="card-description">Official details for National Institute of Technology Durgapur.</p>
+                    <a href="https://nitdgp.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Gujarat University</h3>
+                    <p class="card-description">Official details for Gujarat University.</p>
+                    <a href="https://www.gujaratuniversity.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Shiv Nadar University</h3>
+                    <p class="card-description">Official details for Shiv Nadar University.</p>
+                    <a href="https://snu.edu.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Sri Ramachandra Institute of Higher Education and Research</h3>
+                    <p class="card-description">Official details for Sri Ramachandra Institute of Higher Education and Research.</p>
+                    <a href="https://www.sriramachandra.edu.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Acharya Nagarjuna University</h3>
+                    <p class="card-description">Official details for Acharya Nagarjuna University.</p>
+                    <a href="https://www.nagarjunauniversity.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Tata Institute of Social Sciences</h3>
+                    <p class="card-description">Official details for Tata Institute of Social Sciences.</p>
+                    <a href="https://www.tiss.edu" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">All India Institute of Medical Sciences Patna</h3>
+                    <p class="card-description">Official details for All India Institute of Medical Sciences Patna.</p>
+                    <a href="https://www.aiimspatna.edu.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Periyar University</h3>
+                    <p class="card-description">Official details for Periyar University.</p>
+                    <a href="https://www.periyaruniversity.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Ashoka University</h3>
+                    <p class="card-description">Official details for Ashoka University.</p>
+                    <a href="https://www.ashoka.edu.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Assam University, Silchar</h3>
+                    <p class="card-description">Official details for Assam University, Silchar.</p>
+                    <a href="https://www.aus.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Banasthali Vidyapith</h3>
+                    <p class="card-description">Official details for Banasthali Vidyapith.</p>
+                    <a href="https://www.banasthali.org" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Bangalore University</h3>
+                    <p class="card-description">Official details for Bangalore University.</p>
+                    <a href="https://bangaloreuniversity.karnataka.gov.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Bharati Vidyapeeth</h3>
+                    <p class="card-description">Official details for Bharati Vidyapeeth.</p>
+                    <a href="https://www.bvuniversity.edu.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Birla Institute of Technology</h3>
+                    <p class="card-description">Official details for Birla Institute of Technology.</p>
+                    <a href="https://www.bitmesra.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Calicut University</h3>
+                    <p class="card-description">Official details for Calicut University.</p>
+                    <a href="https://uoc.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Central University of Punjab</h3>
+                    <p class="card-description">Official details for Central University of Punjab.</p>
+                    <a href="https://www.cup.edu.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Central University of Tamil Nadu</h3>
+                    <p class="card-description">Official details for Central University of Tamil Nadu.</p>
+                    <a href="https://cutn.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Chaudhary Charan Singh Haryana Agricultural University</h3>
+                    <p class="card-description">Official details for Chaudhary Charan Singh Haryana Agricultural University.</p>
+                    <a href="https://www.hau.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Chettinad Academy of Research and Education</h3>
+                    <p class="card-description">Official details for Chettinad Academy of Research and Education.</p>
+                    <a href="https://www.care.edu.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Chitkara University</h3>
+                    <p class="card-description">Official details for Chitkara University.</p>
+                    <a href="https://www.chitkara.edu.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Dibrugarh University</h3>
+                    <p class="card-description">Official details for Dibrugarh University.</p>
+                    <a href="https://dibru.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Dr. B R Ambedkar National Institute of Technology Jalandhar</h3>
+                    <p class="card-description">Official details for Dr. B R Ambedkar National Institute of Technology Jalandhar.</p>
+                    <a href="https://www.nitj.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">G.B. Pant Universtiy of Agriculture and Technology</h3>
+                    <p class="card-description">Official details for G.B. Pant Universtiy of Agriculture and Technology.</p>
+                    <a href="https://www.gbpuat.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Guru Gobind Singh Indraprastha University</h3>
+                    <p class="card-description">Official details for Guru Gobind Singh Indraprastha University.</p>
+                    <a href="https://www.ipu.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Indian Institute of Engineering Science and Technology, Shibpur</h3>
+                    <p class="card-description">Official details for Indian Institute of Engineering Science and Technology, Shibpur.</p>
+                    <a href="https://www.iiests.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Indian Institute of Space Science and Technology</h3>
+                    <p class="card-description">Official details for Indian Institute of Space Science and Technology.</p>
+                    <a href="https://www.iist.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Indian Institute of Technology Bhubaneswar</h3>
+                    <p class="card-description">Official details for Indian Institute of Technology Bhubaneswar.</p>
+                    <a href="https://www.iitbbs.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Indian Institute of Technology Palakkad</h3>
+                    <p class="card-description">Official details for Indian Institute of Technology Palakkad.</p>
+                    <a href="https://iitpkd.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Indian Institute of Technology Tirupati</h3>
+                    <p class="card-description">Official details for Indian Institute of Technology Tirupati.</p>
+                    <a href="https://www.iittp.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">International Institute of Information Technology Hyderabad</h3>
+                    <p class="card-description">Official details for International Institute of Information Technology Hyderabad.</p>
+                    <a href="https://www.iiit.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Jain University, Bangalore</h3>
+                    <p class="card-description">Official details for Jain University, Bangalore.</p>
+                    <a href="https://www.jainuniversity.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">M. S. Ramaiah Institute of Technology</h3>
+                    <p class="card-description">Official details for M. S. Ramaiah Institute of Technology.</p>
+                    <a href="https://www.msrit.edu" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Madan Mohan Malaviya University of Technology</h3>
+                    <p class="card-description">Official details for Madan Mohan Malaviya University of Technology.</p>
+                    <a href="https://www.mmmut.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Madurai Kamaraj University</h3>
+                    <p class="card-description">Official details for Madurai Kamaraj University.</p>
+                    <a href="https://mkuniversity.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Maharishi Markandeshwar (Deemed to be University)</h3>
+                    <p class="card-description">Official details for Maharishi Markandeshwar (Deemed to be University).</p>
+                    <a href="https://www.mmumullana.org" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Manav Rachna International Institute of Research and Studies</h3>
+                    <p class="card-description">Official details for Manav Rachna International Institute of Research and Studies.</p>
+                    <a href="https://manavrachna.edu.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Manipal University, Jaipur</h3>
+                    <p class="card-description">Official details for Manipal University, Jaipur.</p>
+                    <a href="https://jaipur.manipal.edu" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Manonmaniam Sundaranar University, Tirunelveli</h3>
+                    <p class="card-description">Official details for Manonmaniam Sundaranar University, Tirunelveli.</p>
+                    <a href="https://www.msuniv.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Mizoram University</h3>
+                    <p class="card-description">Official details for Mizoram University.</p>
+                    <a href="https://www.mzu.edu.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Mumbai University</h3>
+                    <p class="card-description">Official details for Mumbai University.</p>
+                    <a href="https://mu.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">National Institute of Technology Patna</h3>
+                    <p class="card-description">Official details for National Institute of Technology Patna.</p>
+                    <a href="https://www.nitp.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">National Institute of Technology Raipur</h3>
+                    <p class="card-description">Official details for National Institute of Technology Raipur.</p>
+                    <a href="https://www.nitrr.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">National Institute of Technology Srinagar</h3>
+                    <p class="card-description">Official details for National Institute of Technology Srinagar.</p>
+                    <a href="https://www.nitsri.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Netaji Subhas University of Technology (NSUT)</h3>
+                    <p class="card-description">Official details for Netaji Subhas University of Technology (NSUT).</p>
+                    <a href="https://www.nsut.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">NITTE</h3>
+                    <p class="card-description">Official details for NITTE.</p>
+                    <a href="https://nitte.edu.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Pondicherry University</h3>
+                    <p class="card-description">Official details for Pondicherry University.</p>
+                    <a href="https://www.pondiuni.edu.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">PSG College of Technology</h3>
+                    <p class="card-description">Official details for PSG College of Technology.</p>
+                    <a href="https://www.psgtech.edu" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Sant Longowal Institute of Engineering and Technology</h3>
+                    <p class="card-description">Official details for Sant Longowal Institute of Engineering and Technology.</p>
+                    <a href="https://www.sliet.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Sharda University</h3>
+                    <p class="card-description">Official details for Sharda University.</p>
+                    <a href="https://www.sharda.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Sri Balaji Vidyapeeth Mahatma Gandhi Medical College</h3>
+                    <p class="card-description">Official details for Sri Balaji Vidyapeeth Mahatma Gandhi Medical College.</p>
+                    <a href="https://www.sbvu.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Sri Venkateswara University</h3>
+                    <p class="card-description">Official details for Sri Venkateswara University.</p>
+                    <a href="https://svuniversity.edu.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Tamil Nadu Agricultural University</h3>
+                    <p class="card-description">Official details for Tamil Nadu Agricultural University.</p>
+                    <a href="https://tnau.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Tezpur University</h3>
+                    <p class="card-description">Official details for Tezpur University.</p>
+                    <a href="https://www.tezu.ernet.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">University College of Medical Sciences</h3>
+                    <p class="card-description">Official details for University College of Medical Sciences.</p>
+                    <a href="https://www.ucms.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">University of Agricultural Sciences</h3>
+                    <p class="card-description">Official details for University of Agricultural Sciences.</p>
+                    <a href="https://uasbangalore.edu.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Vignan&#39;s Foundation for Science, Technology and Research</h3>
+                    <p class="card-description">Official details for Vignan&#39;s Foundation for Science, Technology and Research.</p>
+                    <a href="https://www.vignan.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Visvesvaraya Technological University</h3>
+                    <p class="card-description">Official details for Visvesvaraya Technological University.</p>
+                    <a href="https://vtu.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Yenepoya University</h3>
+                    <p class="card-description">Official details for Yenepoya University.</p>
+                    <a href="https://www.yenepoya.edu.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Acharya N G Ranga Agricultural University</h3>
+                    <p class="card-description">Official details for Acharya N G Ranga Agricultural University.</p>
+                    <a href="https://angrau.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Amity University</h3>
+                    <p class="card-description">Official details for Amity University.</p>
+                    <a href="https://www.amity.edu" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Amity University Haryana, Gurgaon</h3>
+                    <p class="card-description">Official details for Amity University Haryana, Gurgaon.</p>
+                    <a href="https://www.amity.edu/gurugram" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Annamalai University</h3>
+                    <p class="card-description">Official details for Annamalai University.</p>
+                    <a href="https://annamalaiuniversity.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Avinashilingam Institute for Home Science and Higher Education for Women</h3>
+                    <p class="card-description">Official details for Avinashilingam Institute for Home Science and Higher Education for Women.</p>
+                    <a href="https://avinuty.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">BLDE</h3>
+                    <p class="card-description">Official details for BLDE.</p>
+                    <a href="https://www.bldedu.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">C.V. Raman Global University, Odisha</h3>
+                    <p class="card-description">Official details for C.V. Raman Global University, Odisha.</p>
+                    <a href="https://cgu-odisha.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Central University of Kerala</h3>
+                    <p class="card-description">Official details for Central University of Kerala.</p>
+                    <a href="https://www.cukerala.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Chandigarh Engineering College-CGC, Landran, Mohali</h3>
+                    <p class="card-description">Official details for Chandigarh Engineering College-CGC, Landran, Mohali.</p>
+                    <a href="https://www.cgc.edu.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Chennai Institute of Technology</h3>
+                    <p class="card-description">Official details for Chennai Institute of Technology.</p>
+                    <a href="https://www.citchennai.edu.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">COEP Technological University</h3>
+                    <p class="card-description">Official details for COEP Technological University.</p>
+                    <a href="https://www.coeptech.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Dr. M. G. R. Educational and Research Institute</h3>
+                    <p class="card-description">Official details for Dr. M. G. R. Educational and Research Institute.</p>
+                    <a href="https://www.drmgrdu.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Dr. Y.S. Parmar University of Horticulture and Forestry</h3>
+                    <p class="card-description">Official details for Dr. Y.S. Parmar University of Horticulture and Forestry.</p>
+                    <a href="https://www.yspuniversity.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">G. L. A. University</h3>
+                    <p class="card-description">Official details for G. L. A. University.</p>
+                    <a href="https://www.gla.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Galgotias University</h3>
+                    <p class="card-description">Official details for Galgotias University.</p>
+                    <a href="https://www.galgotiasuniversity.edu.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Gandhi Institute of Technology and Management</h3>
+                    <p class="card-description">Official details for Gandhi Institute of Technology and Management.</p>
+                    <a href="https://www.gitam.edu" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Hindustan Institute of Technology and Science (HITS)</h3>
+                    <p class="card-description">Official details for Hindustan Institute of Technology and Science (HITS).</p>
+                    <a href="https://hindustanuniv.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Indian Institute of Science Education and Research Thiruvananthapuram</h3>
+                    <p class="card-description">Official details for Indian Institute of Science Education and Research Thiruvananthapuram.</p>
+                    <a href="https://www.iisertvm.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Integral University</h3>
+                    <p class="card-description">Official details for Integral University.</p>
+                    <a href="https://iul.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Kalinga University, Raipur</h3>
+                    <p class="card-description">Official details for Kalinga University, Raipur.</p>
+                    <a href="https://kalingauniversity.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Kalyani University</h3>
+                    <p class="card-description">Official details for Kalyani University.</p>
+                    <a href="https://klyuniv.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Karunya Institute of Technology and Sciences</h3>
+                    <p class="card-description">Official details for Karunya Institute of Technology and Sciences.</p>
+                    <a href="https://www.karunya.edu" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">KLE Academy of Higher Education and Research</h3>
+                    <p class="card-description">Official details for KLE Academy of Higher Education and Research.</p>
+                    <a href="https://www.kledeemeduniversity.edu.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">KPR Institute of Engineering and Technology</h3>
+                    <p class="card-description">Official details for KPR Institute of Engineering and Technology.</p>
+                    <a href="https://www.kpriet.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Krishna Vishwa Vidyapeeth</h3>
+                    <p class="card-description">Official details for Krishna Vishwa Vidyapeeth.</p>
+                    <a href="https://www.kimskarad.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Maharshi Dayanand University</h3>
+                    <p class="card-description">Official details for Maharshi Dayanand University.</p>
+                    <a href="https://mdu.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Mangalore University</h3>
+                    <p class="card-description">Official details for Mangalore University.</p>
+                    <a href="https://mangaloreuniversity.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Manipur University</h3>
+                    <p class="card-description">Official details for Manipur University.</p>
+                    <a href="https://www.manipuruniv.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Maulana Azad National Institute of Technology</h3>
+                    <p class="card-description">Official details for Maulana Azad National Institute of Technology.</p>
+                    <a href="https://www.manit.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Mepco Schlenk Engineering College</h3>
+                    <p class="card-description">Official details for Mepco Schlenk Engineering College.</p>
+                    <a href="https://www.mepcoeng.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Motilal Nehru National Institute of Technology</h3>
+                    <p class="card-description">Official details for Motilal Nehru National Institute of Technology.</p>
+                    <a href="https://www.mnnit.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">National Institute of Technology Kurukshetra</h3>
+                    <p class="card-description">Official details for National Institute of Technology Kurukshetra.</p>
+                    <a href="https://nitkkr.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">NIMS University, Jaipur</h3>
+                    <p class="card-description">Official details for NIMS University, Jaipur.</p>
+                    <a href="https://nimsuniversity.org" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Noida Institute of Engineering &amp; Technology</h3>
+                    <p class="card-description">Official details for Noida Institute of Engineering &amp; Technology.</p>
+                    <a href="https://www.niet.co.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">North Eastern Hill University</h3>
+                    <p class="card-description">Official details for North Eastern Hill University.</p>
+                    <a href="https://www.nehu.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Odisha University of Agriculture and Technology</h3>
+                    <p class="card-description">Official details for Odisha University of Agriculture and Technology.</p>
+                    <a href="https://ouat.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Padmashree Dr. D. Y. Patil Vidyapeeth, Mumbai</h3>
+                    <p class="card-description">Official details for Padmashree Dr. D. Y. Patil Vidyapeeth, Mumbai.</p>
+                    <a href="https://dypatil.edu" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Presidency University</h3>
+                    <p class="card-description">Official details for Presidency University.</p>
+                    <a href="https://presidencyuniversity.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">PSG Institute of Medical Sciences and Research</h3>
+                    <p class="card-description">Official details for PSG Institute of Medical Sciences and Research.</p>
+                    <a href="https://psgimsr.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Rajalakshmi Engineering College</h3>
+                    <p class="card-description">Official details for Rajalakshmi Engineering College.</p>
+                    <a href="https://www.rajalakshmi.org" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Sawai Man Singh Medical College</h3>
+                    <p class="card-description">Official details for Sawai Man Singh Medical College.</p>
+                    <a href="https://smsmedicalcollege.org" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">SR University</h3>
+                    <p class="card-description">Official details for SR University.</p>
+                    <a href="https://sru.edu.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Sri Krishna College of Engineering and Technology</h3>
+                    <p class="card-description">Official details for Sri Krishna College of Engineering and Technology.</p>
+                    <a href="https://www.skcet.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Suresh Gyan Vihar University</h3>
+                    <p class="card-description">Official details for Suresh Gyan Vihar University.</p>
+                    <a href="https://www.gyanvihar.org" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">University of Burdwan</h3>
+                    <p class="card-description">Official details for University of Burdwan.</p>
+                    <a href="https://www.buruniv.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">University of Lucknow</h3>
+                    <p class="card-description">Official details for University of Lucknow.</p>
+                    <a href="https://www.lkouniv.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Utkal University</h3>
+                    <p class="card-description">Official details for Utkal University.</p>
+                    <a href="https://utkaluniversity.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Vel Tech Rangarajan Dr. Sagunthala R &amp; D Institute of Science and Technology</h3>
+                    <p class="card-description">Official details for Vel Tech Rangarajan Dr. Sagunthala R &amp; D Institute of Science and Technology.</p>
+                    <a href="https://www.veltech.edu.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Vels Institute of Science Technology and Advanced Studies (VISTAS)</h3>
+                    <p class="card-description">Official details for Vels Institute of Science Technology and Advanced Studies (VISTAS).</p>
+                    <a href="https://vistas.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <div class="website-card" data-category="education">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Visva Bharati</h3>
+                    <p class="card-description">Official details for Visva Bharati.</p>
+                    <a href="https://www.visvabharati.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+
+                <!-- Assam Top 50 Colleges -->
+                <div class="website-card" data-category="education">
+                    <div class="card-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <h3 class="card-title">Indian Institute of Technology Guwahati</h3>
+                    <p class="card-description">Official details for IIT Guwahati.</p>
+                    <a href="https://www.iitg.ac.in" target="_blank" class="card-button">Official Site</a>
+                </div>
+                <div class="website-card" data-category="education"><div class="card-icon"><i class="fas fa-graduation-cap"></i></div><h3 class="card-title">National Institute of Technology Silchar</h3><p class="card-description">Official details for NIT Silchar.</p><a href="https://www.nits.ac.in" target="_blank" class="card-button">Official Site</a></div>
+                <div class="website-card" data-category="education"><div class="card-icon"><i class="fas fa-graduation-cap"></i></div><h3 class="card-title">Indian Institute of Information Technology Guwahati</h3><p class="card-description">Official details for IIIT Guwahati.</p><a href="https://www.iiitg.ac.in" target="_blank" class="card-button">Official Site</a></div>
+                <div class="website-card" data-category="education"><div class="card-icon"><i class="fas fa-graduation-cap"></i></div><h3 class="card-title">Tezpur University</h3><p class="card-description">Official details for Tezpur University.</p><a href="https://www.tezu.ernet.in" target="_blank" class="card-button">Official Site</a></div>
+                <div class="website-card" data-category="education"><div class="card-icon"><i class="fas fa-graduation-cap"></i></div><h3 class="card-title">Gauhati University</h3><p class="card-description">Official details for Gauhati University.</p><a href="https://www.gauhati.ac.in" target="_blank" class="card-button">Official Site</a></div>
+                <div class="website-card" data-category="education"><div class="card-icon"><i class="fas fa-graduation-cap"></i></div><h3 class="card-title">Assam University, Silchar</h3><p class="card-description">Official details for Assam University, Silchar.</p><a href="https://www.aus.ac.in" target="_blank" class="card-button">Official Site</a></div>
+                <div class="website-card" data-category="education"><div class="card-icon"><i class="fas fa-graduation-cap"></i></div><h3 class="card-title">Dibrugarh University</h3><p class="card-description">Official details for Dibrugarh University.</p><a href="https://www.dibru.ac.in" target="_blank" class="card-button">Official Site</a></div>
+                <div class="website-card" data-category="education"><div class="card-icon"><i class="fas fa-graduation-cap"></i></div><h3 class="card-title">Cotton University</h3><p class="card-description">Official details for Cotton University.</p><a href="https://www.cottonuniversity.ac.in" target="_blank" class="card-button">Official Site</a></div>
+                <div class="website-card" data-category="education"><div class="card-icon"><i class="fas fa-graduation-cap"></i></div><h3 class="card-title">Bodoland University</h3><p class="card-description">Official details for Bodoland University.</p><a href="https://www.bodolanduniversity.ac.in" target="_blank" class="card-button">Official Site</a></div>
+                <div class="website-card" data-category="education"><div class="card-icon"><i class="fas fa-graduation-cap"></i></div><h3 class="card-title">Assam Agricultural University</h3><p class="card-description">Official details for Assam Agricultural University.</p><a href="https://www.aau.ac.in" target="_blank" class="card-button">Official Site</a></div>
+                <div class="website-card" data-category="education"><div class="card-icon"><i class="fas fa-graduation-cap"></i></div><h3 class="card-title">Assam Science and Technology University</h3><p class="card-description">Official details for Assam Science and Technology University.</p><a href="https://www.astu.ac.in" target="_blank" class="card-button">Official Site</a></div>
+                <div class="website-card" data-category="education"><div class="card-icon"><i class="fas fa-graduation-cap"></i></div><h3 class="card-title">Assam Women's University</h3><p class="card-description">Official details for Assam Women's University.</p><a href="https://www.awu.ac.in" target="_blank" class="card-button">Official Site</a></div>
+                <div class="website-card" data-category="education"><div class="card-icon"><i class="fas fa-graduation-cap"></i></div><h3 class="card-title">Krishna Kanta Handiqui State Open University</h3><p class="card-description">Official details for KKHSOU.</p><a href="https://www.kkhsou.in" target="_blank" class="card-button">Official Site</a></div>
+                <div class="website-card" data-category="education"><div class="card-icon"><i class="fas fa-graduation-cap"></i></div><h3 class="card-title">Srimanta Sankaradeva University of Health Sciences</h3><p class="card-description">Official details for SSUHS.</p><a href="https://www.ssuhs.in" target="_blank" class="card-button">Official Site</a></div>
+                <div class="website-card" data-category="education"><div class="card-icon"><i class="fas fa-graduation-cap"></i></div><h3 class="card-title">National Law University and Judicial Academy, Assam</h3><p class="card-description">Official details for NLU Assam.</p><a href="https://www.nluassam.ac.in" target="_blank" class="card-button">Official Site</a></div>
+                <div class="website-card" data-category="education"><div class="card-icon"><i class="fas fa-graduation-cap"></i></div><h3 class="card-title">Assam Don Bosco University</h3><p class="card-description">Official details for Assam Don Bosco University.</p><a href="https://www.dbuniversity.ac.in" target="_blank" class="card-button">Official Site</a></div>
+                <div class="website-card" data-category="education"><div class="card-icon"><i class="fas fa-graduation-cap"></i></div><h3 class="card-title">Assam down town University</h3><p class="card-description">Official details for Assam down town University.</p><a href="https://adtu.in" target="_blank" class="card-button">Official Site</a></div>
+                <div class="website-card" data-category="education"><div class="card-icon"><i class="fas fa-graduation-cap"></i></div><h3 class="card-title">The Assam Kaziranga University</h3><p class="card-description">Official details for Kaziranga University.</p><a href="https://www.kazirangauniversity.in" target="_blank" class="card-button">Official Site</a></div>
+                <div class="website-card" data-category="education"><div class="card-icon"><i class="fas fa-graduation-cap"></i></div><h3 class="card-title">The Assam Royal Global University</h3><p class="card-description">Official details for Royal Global University.</p><a href="https://rgu.ac" target="_blank" class="card-button">Official Site</a></div>
+                <div class="website-card" data-category="education"><div class="card-icon"><i class="fas fa-graduation-cap"></i></div><h3 class="card-title">Rabindranath Tagore University, Hojai</h3><p class="card-description">Official details for Rabindranath Tagore University, Hojai.</p><a href="https://www.rtuassam.ac.in" target="_blank" class="card-button">Official Site</a></div>
+                <div class="website-card" data-category="education"><div class="card-icon"><i class="fas fa-graduation-cap"></i></div><h3 class="card-title">Mahapurusha Srimanta Sankaradeva Viswavidyalaya</h3><p class="card-description">Official details for MSSV.</p><a href="https://www.mssv.ac.in" target="_blank" class="card-button">Official Site</a></div>
+                <div class="website-card" data-category="education"><div class="card-icon"><i class="fas fa-graduation-cap"></i></div><h3 class="card-title">Kumar Bhaskar Varma Sanskrit and Ancient Studies University</h3><p class="card-description">Official details for KBVSAS University.</p><a href="https://www.kbvsasun.ac.in" target="_blank" class="card-button">Official Site</a></div>
+                <div class="website-card" data-category="education"><div class="card-icon"><i class="fas fa-graduation-cap"></i></div><h3 class="card-title">Bhattadev University</h3><p class="card-description">Official details for Bhattadev University.</p><a href="https://www.bhattadevuniversity.ac.in" target="_blank" class="card-button">Official Site</a></div>
+                <div class="website-card" data-category="education"><div class="card-icon"><i class="fas fa-graduation-cap"></i></div><h3 class="card-title">Madhabdev University</h3><p class="card-description">Official details for Madhabdev University.</p><a href="https://www.madhabdevuniversity.ac.in" target="_blank" class="card-button">Official Site</a></div>
+                <div class="website-card" data-category="education"><div class="card-icon"><i class="fas fa-graduation-cap"></i></div><h3 class="card-title">Birangana Sati Sadhani Rajyik Vishwavidyalaya</h3><p class="card-description">Official details for BSSRV.</p><a href="https://www.bssrv.ac.in" target="_blank" class="card-button">Official Site</a></div>
+                <div class="website-card" data-category="education"><div class="card-icon"><i class="fas fa-graduation-cap"></i></div><h3 class="card-title">Assam Skill University</h3><p class="card-description">Official details for Assam Skill University.</p><a href="https://asu.ac.in" target="_blank" class="card-button">Official Site</a></div>
+                <div class="website-card" data-category="education"><div class="card-icon"><i class="fas fa-graduation-cap"></i></div><h3 class="card-title">Assam Engineering College</h3><p class="card-description">Official details for Assam Engineering College.</p><a href="https://www.aec.ac.in" target="_blank" class="card-button">Official Site</a></div>
+                <div class="website-card" data-category="education"><div class="card-icon"><i class="fas fa-graduation-cap"></i></div><h3 class="card-title">Jorhat Engineering College</h3><p class="card-description">Official details for Jorhat Engineering College.</p><a href="https://jecassam.ac.in" target="_blank" class="card-button">Official Site</a></div>
+                <div class="website-card" data-category="education"><div class="card-icon"><i class="fas fa-graduation-cap"></i></div><h3 class="card-title">Jorhat Institute of Science and Technology</h3><p class="card-description">Official details for JIST.</p><a href="https://www.jist.ac.in" target="_blank" class="card-button">Official Site</a></div>
+                <div class="website-card" data-category="education"><div class="card-icon"><i class="fas fa-graduation-cap"></i></div><h3 class="card-title">Bineswar Brahma Engineering College</h3><p class="card-description">Official details for BBEC.</p><a href="https://www.bbec.ac.in" target="_blank" class="card-button">Official Site</a></div>
+                <div class="website-card" data-category="education"><div class="card-icon"><i class="fas fa-graduation-cap"></i></div><h3 class="card-title">Barak Valley Engineering College</h3><p class="card-description">Official details for BVEC.</p><a href="https://www.bvec.ac.in" target="_blank" class="card-button">Official Site</a></div>
+                <div class="website-card" data-category="education"><div class="card-icon"><i class="fas fa-graduation-cap"></i></div><h3 class="card-title">Dhemaji Engineering College</h3><p class="card-description">Official details for Dhemaji Engineering College.</p><a href="https://dec.ac.in" target="_blank" class="card-button">Official Site</a></div>
+                <div class="website-card" data-category="education"><div class="card-icon"><i class="fas fa-graduation-cap"></i></div><h3 class="card-title">Golaghat Engineering College</h3><p class="card-description">Official details for Golaghat Engineering College.</p><a href="https://gec.ac.in" target="_blank" class="card-button">Official Site</a></div>
+                <div class="website-card" data-category="education"><div class="card-icon"><i class="fas fa-graduation-cap"></i></div><h3 class="card-title">Central Institute of Technology Kokrajhar</h3><p class="card-description">Official details for CIT Kokrajhar.</p><a href="https://www.cit.ac.in" target="_blank" class="card-button">Official Site</a></div>
+                <div class="website-card" data-category="education"><div class="card-icon"><i class="fas fa-graduation-cap"></i></div><h3 class="card-title">Gauhati Medical College and Hospital</h3><p class="card-description">Official details for GMCH.</p><a href="https://gmchassam.gov.in" target="_blank" class="card-button">Official Site</a></div>
+                <div class="website-card" data-category="education"><div class="card-icon"><i class="fas fa-graduation-cap"></i></div><h3 class="card-title">Assam Medical College and Hospital</h3><p class="card-description">Official details for AMCH.</p><a href="https://amch.edu.in" target="_blank" class="card-button">Official Site</a></div>
+                <div class="website-card" data-category="education"><div class="card-icon"><i class="fas fa-graduation-cap"></i></div><h3 class="card-title">Silchar Medical College and Hospital</h3><p class="card-description">Official details for SMCH.</p><a href="https://smcassam.gov.in" target="_blank" class="card-button">Official Site</a></div>
+                <div class="website-card" data-category="education"><div class="card-icon"><i class="fas fa-graduation-cap"></i></div><h3 class="card-title">Jorhat Medical College and Hospital</h3><p class="card-description">Official details for JMCH.</p><a href="https://jmchassam.org" target="_blank" class="card-button">Official Site</a></div>
+                <div class="website-card" data-category="education"><div class="card-icon"><i class="fas fa-graduation-cap"></i></div><h3 class="card-title">Fakhruddin Ali Ahmed Medical College and Hospital</h3><p class="card-description">Official details for FAAMCH.</p><a href="https://faamcassam.co.in" target="_blank" class="card-button">Official Site</a></div>
+                <div class="website-card" data-category="education"><div class="card-icon"><i class="fas fa-graduation-cap"></i></div><h3 class="card-title">Tezpur Medical College and Hospital</h3><p class="card-description">Official details for Tezpur Medical College.</p><a href="https://tmcassam.org" target="_blank" class="card-button">Official Site</a></div>
+                <div class="website-card" data-category="education"><div class="card-icon"><i class="fas fa-graduation-cap"></i></div><h3 class="card-title">Diphu Medical College and Hospital</h3><p class="card-description">Official details for Diphu Medical College.</p><a href="https://diphumedicalcollege.org" target="_blank" class="card-button">Official Site</a></div>
+                <div class="website-card" data-category="education"><div class="card-icon"><i class="fas fa-graduation-cap"></i></div><h3 class="card-title">Lakhimpur Medical College and Hospital</h3><p class="card-description">Official details for Lakhimpur Medical College.</p><a href="https://lmhassam.edu.in" target="_blank" class="card-button">Official Site</a></div>
+                <div class="website-card" data-category="education"><div class="card-icon"><i class="fas fa-graduation-cap"></i></div><h3 class="card-title">Nalbari Medical College and Hospital</h3><p class="card-description">Official details for Nalbari Medical College.</p><a href="https://nmchassam.org" target="_blank" class="card-button">Official Site</a></div>
+                <div class="website-card" data-category="education"><div class="card-icon"><i class="fas fa-graduation-cap"></i></div><h3 class="card-title">Kokrajhar Medical College and Hospital</h3><p class="card-description">Official details for Kokrajhar Medical College.</p><a href="https://kmcassam.org" target="_blank" class="card-button">Official Site</a></div>
+                <div class="website-card" data-category="education"><div class="card-icon"><i class="fas fa-graduation-cap"></i></div><h3 class="card-title">Nagaon Medical College and Hospital</h3><p class="card-description">Official details for Nagaon Medical College.</p><a href="https://nmcassam.org" target="_blank" class="card-button">Official Site</a></div>
+                <div class="website-card" data-category="education"><div class="card-icon"><i class="fas fa-graduation-cap"></i></div><h3 class="card-title">Dhubri Medical College and Hospital</h3><p class="card-description">Official details for Dhubri Medical College.</p><a href="https://dhubrimedicalcollege.org" target="_blank" class="card-button">Official Site</a></div>
+                <div class="website-card" data-category="education"><div class="card-icon"><i class="fas fa-graduation-cap"></i></div><h3 class="card-title">Handique Girls' College</h3><p class="card-description">Official details for Handique Girls' College.</p><a href="https://www.handiquegirlscollege.ac.in" target="_blank" class="card-button">Official Site</a></div>
+                <div class="website-card" data-category="education"><div class="card-icon"><i class="fas fa-graduation-cap"></i></div><h3 class="card-title">B. Borooah College</h3><p class="card-description">Official details for B. Borooah College.</p><a href="https://www.bborooahcollege.ac.in" target="_blank" class="card-button">Official Site</a></div>
+                <div class="website-card" data-category="education"><div class="card-icon"><i class="fas fa-graduation-cap"></i></div><h3 class="card-title">Arya Vidyapeeth College</h3><p class="card-description">Official details for Arya Vidyapeeth College.</p><a href="https://www.aryavidyapeethcollege.ac.in" target="_blank" class="card-button">Official Site</a></div>
+                <div class="website-card" data-category="education"><div class="card-icon"><i class="fas fa-graduation-cap"></i></div><h3 class="card-title">Gurucharan College, Silchar</h3><p class="card-description">Official details for Gurucharan College, Silchar.</p><a href="https://www.gcsilchar.ac.in" target="_blank" class="card-button">Official Site</a></div>
+
+<!-- AI Tools -->
                 <div class="website-card" data-category="ai">
                     <div class="card-icon">
                         <i class="fas fa-robot"></i>
@@ -1492,212 +3039,322 @@
                     <a href="https://www.notion.so" target="_blank" class="card-button">Visit Website</a>
                 </div>
 
-                <!-- Daily Useful Websites -->
-                <div class="website-card" data-category="daily">
-                    <div class="card-icon">
-                        <i class="fas fa-cloud-sun"></i>
-                    </div>
-                    <h3 class="card-title">Weather.com</h3>
-                    <p class="card-description">Accurate weather forecasts and severe weather alerts.</p>
-                    <a href="https://weather.com" target="_blank" class="card-button">Visit Website</a>
-                </div>
-
-                <div class="website-card" data-category="daily">
-                    <div class="card-icon">
-                        <i class="fas fa-map-marked-alt"></i>
-                    </div>
-                    <h3 class="card-title">Google Maps</h3>
-                    <p class="card-description">Navigation, traffic, and local business information.</p>
-                    <a href="https://maps.google.com" target="_blank" class="card-button">Visit Website</a>
-                </div>
-
-                <div class="website-card" data-category="daily">
-                    <div class="card-icon">
-                        <i class="fas fa-language"></i>
-                    </div>
-                    <h3 class="card-title">Google Translate</h3>
-                    <p class="card-description">Free multilingual translation service by Google.</p>
-                    <a href="https://translate.google.com" target="_blank" class="card-button">Visit Website</a>
-                </div>
-
-                <div class="website-card" data-category="daily">
-                    <div class="card-icon">
-                        <i class="fas fa-envelope"></i>
-                    </div>
-                    <h3 class="card-title">Gmail</h3>
-                    <p class="card-description">Google's free email service with powerful features and storage.</p>
-                    <a href="https://gmail.com" target="_blank" class="card-button">Visit Website</a>
-                </div>
-
-                <div class="website-card" data-category="daily">
-                    <div class="card-icon">
-                        <i class="fab fa-whatsapp"></i>
-                    </div>
-                    <h3 class="card-title">WhatsApp Web</h3>
-                    <p class="card-description">Access WhatsApp messages and calls from your computer browser.</p>
-                    <a href="https://web.whatsapp.com" target="_blank" class="card-button">Visit Website</a>
-                </div>
-
-                <div class="website-card" data-category="daily">
-                    <div class="card-icon">
-                        <i class="fas fa-video"></i>
-                    </div>
-                    <h3 class="card-title">Zoom</h3>
-                    <p class="card-description">Video conferencing platform for meetings, webinars, and online calls.</p>
-                    <a href="https://zoom.us" target="_blank" class="card-button">Visit Website</a>
-                </div>
-
-                <div class="website-card" data-category="daily">
-                    <div class="card-icon">
-                        <i class="fab fa-paypal"></i>
-                    </div>
-                    <h3 class="card-title">PayPal</h3>
-                    <p class="card-description">Secure online payment system for shopping and money transfers.</p>
-                    <a href="https://paypal.com" target="_blank" class="card-button">Visit Website</a>
-                </div>
-
-                <div class="website-card" data-category="daily">
-                    <div class="card-icon">
-                        <i class="fab fa-amazon"></i>
-                    </div>
+                <!-- Shopping Websites -->
+                <div class="website-card" data-category="shopping">
+                    <div class="card-icon"><i class="fab fa-amazon"></i></div>
                     <h3 class="card-title">Amazon India</h3>
-                    <p class="card-description">Online shopping for electronics, books, fashion, and daily essentials.</p>
-                    <a href="https://amazon.in" target="_blank" class="card-button">Visit Website</a>
+                    <p class="card-description">Electronics, fashion, and daily needs.</p>
+                    <a href="https://www.amazon.in" target="_blank" class="card-button">Visit Website</a>
                 </div>
-
-                <div class="website-card" data-category="daily">
-                    <div class="card-icon">
-                        <i class="fas fa-shopping-cart"></i>
-                    </div>
+                <div class="website-card" data-category="shopping">
+                    <div class="card-icon"><i class="fas fa-shopping-cart"></i></div>
                     <h3 class="card-title">Flipkart</h3>
-                    <p class="card-description">India's leading e-commerce platform for online shopping and deals.</p>
-                    <a href="https://flipkart.com" target="_blank" class="card-button">Visit Website</a>
+                    <p class="card-description">General shopping and electronics.</p>
+                    <a href="https://www.flipkart.com" target="_blank" class="card-button">Visit Website</a>
+                </div>
+                <div class="website-card" data-category="shopping">
+                    <div class="card-icon"><i class="fas fa-tags"></i></div>
+                    <h3 class="card-title">Meesho</h3>
+                    <p class="card-description">Low-cost goods and social commerce.</p>
+                    <a href="https://www.meesho.com" target="_blank" class="card-button">Visit Website</a>
+                </div>
+                <div class="website-card" data-category="shopping">
+                    <div class="card-icon"><i class="fas fa-tag"></i></div>
+                    <h3 class="card-title">Snapdeal</h3>
+                    <p class="card-description">Value products and fashion.</p>
+                    <a href="https://www.snapdeal.com" target="_blank" class="card-button">Visit Website</a>
+                </div>
+                <div class="website-card" data-category="shopping">
+                    <div class="card-icon"><i class="fas fa-store"></i></div>
+                    <h3 class="card-title">Tata CLiQ</h3>
+                    <p class="card-description">Electronics and fashion marketplace.</p>
+                    <a href="https://www.tatacliq.com" target="_blank" class="card-button">Visit Website</a>
+                </div>
+                <div class="website-card" data-category="shopping">
+                    <div class="card-icon"><i class="fas fa-shopping-basket"></i></div>
+                    <h3 class="card-title">JioMart</h3>
+                    <p class="card-description">Groceries and essentials.</p>
+                    <a href="https://www.jiomart.com" target="_blank" class="card-button">Visit Website</a>
+                </div>
+                <div class="website-card" data-category="shopping">
+                    <div class="card-icon"><i class="fas fa-wallet"></i></div>
+                    <h3 class="card-title">Paytm Mall</h3>
+                    <p class="card-description">Electronics and lifestyle shopping.</p>
+                    <a href="https://paytmmall.com" target="_blank" class="card-button">Visit Website</a>
+                </div>
+                <div class="website-card" data-category="shopping">
+                    <div class="card-icon"><i class="fas fa-percent"></i></div>
+                    <h3 class="card-title">ShopClues</h3>
+                    <p class="card-description">Budget shopping products.</p>
+                    <a href="https://www.shopclues.com" target="_blank" class="card-button">Visit Website</a>
+                </div>
+                <div class="website-card" data-category="shopping">
+                    <div class="card-icon"><i class="fas fa-boxes"></i></div>
+                    <h3 class="card-title">Udaan</h3>
+                    <p class="card-description">B2B wholesale marketplace.</p>
+                    <a href="https://udaan.com" target="_blank" class="card-button">Visit Website</a>
+                </div>
+                <div class="website-card" data-category="shopping">
+                    <div class="card-icon"><i class="fas fa-industry"></i></div>
+                    <h3 class="card-title">IndiaMART</h3>
+                    <p class="card-description">B2B product marketplace.</p>
+                    <a href="https://www.indiamart.com" target="_blank" class="card-button">Visit Website</a>
+                </div>
+                <div class="website-card" data-category="shopping">
+                    <div class="card-icon"><i class="fas fa-desktop"></i></div>
+                    <h3 class="card-title">Logic ERP Solutions</h3>
+                    <p class="card-description">Retail ERP and commerce solutions.</p>
+                    <a href="https://www.logicerp.com" target="_blank" class="card-button">Visit Website</a>
                 </div>
 
-                <div class="website-card" data-category="daily">
-                    <div class="card-icon">
-                        <i class="fas fa-utensils"></i>
-                    </div>
-                    <h3 class="card-title">Zomato</h3>
-                    <p class="card-description">Food delivery, restaurant discovery, and dining reviews platform.</p>
-                    <a href="https://zomato.com" target="_blank" class="card-button">Visit Website</a>
+                <!-- Fashion & Lifestyle -->
+                <div class="website-card" data-category="shopping">
+                    <div class="card-icon"><i class="fas fa-tshirt"></i></div>
+                    <h3 class="card-title">Myntra</h3>
+                    <p class="card-description">Trendy clothing and fashion.</p>
+                    <a href="https://www.myntra.com" target="_blank" class="card-button">Visit Website</a>
+                </div>
+                <div class="website-card" data-category="shopping">
+                    <div class="card-icon"><i class="fas fa-gem"></i></div>
+                    <h3 class="card-title">Ajio</h3>
+                    <p class="card-description">Premium fashion shopping.</p>
+                    <a href="https://www.ajio.com" target="_blank" class="card-button">Visit Website</a>
+                </div>
+                <div class="website-card" data-category="shopping">
+                    <div class="card-icon"><i class="fas fa-palette"></i></div>
+                    <h3 class="card-title">LimeRoad</h3>
+                    <p class="card-description">Fashion shopping and style lookbooks.</p>
+                    <a href="https://www.limeroad.com" target="_blank" class="card-button">Visit Website</a>
+                </div>
+                <div class="website-card" data-category="shopping">
+                    <div class="card-icon"><i class="fas fa-socks"></i></div>
+                    <h3 class="card-title">Nykaa Fashion</h3>
+                    <p class="card-description">Apparel and accessories.</p>
+                    <a href="https://www.nykaafashion.com" target="_blank" class="card-button">Visit Website</a>
+                </div>
+                <div class="website-card" data-category="shopping">
+                    <div class="card-icon"><i class="fas fa-store-alt"></i></div>
+                    <h3 class="card-title">Westside</h3>
+                    <p class="card-description">Fashion and lifestyle shopping.</p>
+                    <a href="https://www.westside.com" target="_blank" class="card-button">Visit Website</a>
+                </div>
+                <div class="website-card" data-category="shopping">
+                    <div class="card-icon"><i class="fas fa-tshirt"></i></div>
+                    <h3 class="card-title">Max Fashion</h3>
+                    <p class="card-description">Affordable fashion and apparel.</p>
+                    <a href="https://www.maxfashion.in" target="_blank" class="card-button">Visit Website</a>
+                </div>
+                <div class="website-card" data-category="shopping">
+                    <div class="card-icon"><i class="fas fa-shopping-bag"></i></div>
+                    <h3 class="card-title">Shoppers Stop</h3>
+                    <p class="card-description">Fashion, beauty, and lifestyle products.</p>
+                    <a href="https://www.shoppersstop.com" target="_blank" class="card-button">Visit Website</a>
+                </div>
+                <div class="website-card" data-category="shopping">
+                    <div class="card-icon"><i class="fas fa-store"></i></div>
+                    <h3 class="card-title">Lifestyle Stores</h3>
+                    <p class="card-description">Fashion and lifestyle shopping.</p>
+                    <a href="https://www.lifestylestores.com" target="_blank" class="card-button">Visit Website</a>
+                </div>
+                <div class="website-card" data-category="shopping">
+                    <div class="card-icon"><i class="fas fa-globe"></i></div>
+                    <h3 class="card-title">Shein</h3>
+                    <p class="card-description">Global online fashion products.</p>
+                    <a href="https://www.shein.com" target="_blank" class="card-button">Visit Website</a>
+                </div>
+                <div class="website-card" data-category="shopping">
+                    <div class="card-icon"><i class="fas fa-smile"></i></div>
+                    <h3 class="card-title">Bewakoof</h3>
+                    <p class="card-description">Trendy casual fashion brand.</p>
+                    <a href="https://www.bewakoof.com" target="_blank" class="card-button">Visit Website</a>
+                </div>
+                <div class="website-card" data-category="shopping">
+                    <div class="card-icon"><i class="fas fa-leaf"></i></div>
+                    <h3 class="card-title">FabIndia</h3>
+                    <p class="card-description">Ethnic wear and handcrafted products.</p>
+                    <a href="https://www.fabindia.com" target="_blank" class="card-button">Visit Website</a>
+                </div>
+                <div class="website-card" data-category="shopping">
+                    <div class="card-icon"><i class="fas fa-ring"></i></div>
+                    <h3 class="card-title">Craftsvilla</h3>
+                    <p class="card-description">Traditional and ethnic products.</p>
+                    <a href="https://www.craftsvilla.com" target="_blank" class="card-button">Visit Website</a>
+                </div>
+                <div class="website-card" data-category="shopping">
+                    <div class="card-icon"><i class="fas fa-female"></i></div>
+                    <h3 class="card-title">Biba</h3>
+                    <p class="card-description">Ethnic fashion for women.</p>
+                    <a href="https://www.biba.in" target="_blank" class="card-button">Visit Website</a>
+                </div>
+                <div class="website-card" data-category="shopping">
+                    <div class="card-icon"><i class="fas fa-book-open"></i></div>
+                    <h3 class="card-title">Vogue India</h3>
+                    <p class="card-description">Fashion and lifestyle trends.</p>
+                    <a href="https://www.vogue.in" target="_blank" class="card-button">Visit Website</a>
+                </div>
+                <div class="website-card" data-category="shopping">
+                    <div class="card-icon"><i class="fas fa-crown"></i></div>
+                    <h3 class="card-title">Kalki Fashion</h3>
+                    <p class="card-description">Designer ethnic and wedding fashion.</p>
+                    <a href="https://www.kalkifashion.com" target="_blank" class="card-button">Visit Website</a>
                 </div>
 
-                <div class="website-card" data-category="daily">
-                    <div class="card-icon">
-                        <i class="fas fa-motorcycle"></i>
-                    </div>
-                    <h3 class="card-title">Swiggy</h3>
-                    <p class="card-description">Online food delivery service with quick delivery and wide restaurant options.</p>
-                    <a href="https://swiggy.com" target="_blank" class="card-button">Visit Website</a>
+                <!-- Beauty & Personal Care -->
+                <div class="website-card" data-category="shopping">
+                    <div class="card-icon"><i class="fas fa-spa"></i></div>
+                    <h3 class="card-title">Nykaa</h3>
+                    <p class="card-description">Beauty and personal care products.</p>
+                    <a href="https://www.nykaa.com" target="_blank" class="card-button">Visit Website</a>
+                </div>
+                <div class="website-card" data-category="shopping">
+                    <div class="card-icon"><i class="fas fa-brush"></i></div>
+                    <h3 class="card-title">Purplle</h3>
+                    <p class="card-description">Beauty and makeup products.</p>
+                    <a href="https://www.purplle.com" target="_blank" class="card-button">Visit Website</a>
+                </div>
+                <div class="website-card" data-category="shopping">
+                    <div class="card-icon"><i class="fas fa-magic"></i></div>
+                    <h3 class="card-title">Sephora India</h3>
+                    <p class="card-description">Premium beauty products.</p>
+                    <a href="https://sephora.in" target="_blank" class="card-button">Visit Website</a>
+                </div>
+                <div class="website-card" data-category="shopping">
+                    <div class="card-icon"><i class="fas fa-seedling"></i></div>
+                    <h3 class="card-title">Mamaearth</h3>
+                    <p class="card-description">Natural skincare and beauty products.</p>
+                    <a href="https://mamaearth.in" target="_blank" class="card-button">Visit Website</a>
+                </div>
+                <div class="website-card" data-category="shopping">
+                    <div class="card-icon"><i class="fas fa-baby"></i></div>
+                    <h3 class="card-title">The Moms Co.</h3>
+                    <p class="card-description">Personal care products for moms and babies.</p>
+                    <a href="https://themomsco.com" target="_blank" class="card-button">Visit Website</a>
                 </div>
 
-                <div class="website-card" data-category="daily">
-                    <div class="card-icon">
-                        <i class="fas fa-plane"></i>
-                    </div>
-                    <h3 class="card-title">MakeMyTrip</h3>
-                    <p class="card-description">Travel booking platform for flights, hotels, trains, and holiday packages.</p>
-                    <a href="https://makemytrip.com" target="_blank" class="card-button">Visit Website</a>
+                <!-- Electronics & Mobiles -->
+                <div class="website-card" data-category="shopping">
+                    <div class="card-icon"><i class="fas fa-tv"></i></div>
+                    <h3 class="card-title">Croma</h3>
+                    <p class="card-description">Electronics and appliances.</p>
+                    <a href="https://www.croma.com" target="_blank" class="card-button">Visit Website</a>
+                </div>
+                <div class="website-card" data-category="shopping">
+                    <div class="card-icon"><i class="fas fa-mobile-alt"></i></div>
+                    <h3 class="card-title">Reliance Digital</h3>
+                    <p class="card-description">Electronics and mobile devices.</p>
+                    <a href="https://www.reliancedigital.in" target="_blank" class="card-button">Visit Website</a>
+                </div>
+                <div class="website-card" data-category="shopping">
+                    <div class="card-icon"><i class="fas fa-mobile"></i></div>
+                    <h3 class="card-title">Samsung India</h3>
+                    <p class="card-description">Samsung devices and electronics.</p>
+                    <a href="https://www.samsung.com/in" target="_blank" class="card-button">Visit Website</a>
+                </div>
+                <div class="website-card" data-category="shopping">
+                    <div class="card-icon"><i class="fab fa-apple"></i></div>
+                    <h3 class="card-title">Apple India</h3>
+                    <p class="card-description">Apple products and accessories.</p>
+                    <a href="https://www.apple.com/in" target="_blank" class="card-button">Visit Website</a>
+                </div>
+                <div class="website-card" data-category="shopping">
+                    <div class="card-icon"><i class="fas fa-plug"></i></div>
+                    <h3 class="card-title">Vijay Sales</h3>
+                    <p class="card-description">Consumer electronics and home appliances.</p>
+                    <a href="https://www.vijaysales.com" target="_blank" class="card-button">Visit Website</a>
                 </div>
 
-                <div class="website-card" data-category="daily">
-                    <div class="card-icon">
-                        <i class="fas fa-ticket-alt"></i>
-                    </div>
+                <!-- Groceries & Quick Commerce -->
+                <div class="website-card" data-category="shopping">
+                    <div class="card-icon"><i class="fas fa-bolt"></i></div>
+                    <h3 class="card-title">Blinkit</h3>
+                    <p class="card-description">10-minute grocery delivery.</p>
+                    <a href="https://blinkit.com" target="_blank" class="card-button">Visit Website</a>
+                </div>
+                <div class="website-card" data-category="shopping">
+                    <div class="card-icon"><i class="fas fa-apple-alt"></i></div>
+                    <h3 class="card-title">BigBasket</h3>
+                    <p class="card-description">Online supermarket and household essentials.</p>
+                    <a href="https://www.bigbasket.com" target="_blank" class="card-button">Visit Website</a>
+                </div>
+                <div class="website-card" data-category="shopping">
+                    <div class="card-icon"><i class="fas fa-shipping-fast"></i></div>
+                    <h3 class="card-title">Zepto</h3>
+                    <p class="card-description">Fast grocery delivery platform.</p>
+                    <a href="https://www.zeptonow.com" target="_blank" class="card-button">Visit Website</a>
+                </div>
+                <div class="website-card" data-category="shopping">
+                    <div class="card-icon"><i class="fas fa-shopping-basket"></i></div>
+                    <h3 class="card-title">Swiggy Instamart</h3>
+                    <p class="card-description">Quick grocery and household delivery.</p>
+                    <a href="https://www.swiggy.com/instamart" target="_blank" class="card-button">Visit Website</a>
+                </div>
+                <div class="website-card" data-category="shopping">
+                    <div class="card-icon"><i class="fas fa-motorcycle"></i></div>
+                    <h3 class="card-title">Dunzo</h3>
+                    <p class="card-description">Hyperlocal delivery for groceries and essentials.</p>
+                    <a href="https://www.dunzo.com" target="_blank" class="card-button">Visit Website</a>
+                </div>
+
+                <!-- Specialty Shopping -->
+                <div class="website-card" data-category="shopping">
+                    <div class="card-icon"><i class="fas fa-glasses"></i></div>
+                    <h3 class="card-title">Lenskart</h3>
+                    <p class="card-description">Eyewear and vision products.</p>
+                    <a href="https://www.lenskart.com" target="_blank" class="card-button">Visit Website</a>
+                </div>
+                <div class="website-card" data-category="shopping">
+                    <div class="card-icon"><i class="fas fa-baby-carriage"></i></div>
+                    <h3 class="card-title">FirstCry</h3>
+                    <p class="card-description">Baby products and parenting essentials.</p>
+                    <a href="https://www.firstcry.com" target="_blank" class="card-button">Visit Website</a>
+                </div>
+                <div class="website-card" data-category="shopping">
+                    <div class="card-icon"><i class="fas fa-couch"></i></div>
+                    <h3 class="card-title">Pepperfry</h3>
+                    <p class="card-description">Furniture and home decor.</p>
+                    <a href="https://www.pepperfry.com" target="_blank" class="card-button">Visit Website</a>
+                </div>
+                <div class="website-card" data-category="shopping">
+                    <div class="card-icon"><i class="fas fa-home"></i></div>
+                    <h3 class="card-title">Urban Ladder</h3>
+                    <p class="card-description">Furniture and home essentials.</p>
+                    <a href="https://www.urbanladder.com" target="_blank" class="card-button">Visit Website</a>
+                </div>
+                <div class="website-card" data-category="shopping">
+                    <div class="card-icon"><i class="fas fa-pills"></i></div>
+                    <h3 class="card-title">PharmEasy</h3>
+                    <p class="card-description">Online medicine and healthcare products.</p>
+                    <a href="https://pharmeasy.in" target="_blank" class="card-button">Visit Website</a>
+                </div>
+                <div class="website-card" data-category="shopping">
+                    <div class="card-icon"><i class="fas fa-clinic-medical"></i></div>
+                    <h3 class="card-title">Apollo 24x7</h3>
+                    <p class="card-description">Medicines and healthcare services.</p>
+                    <a href="https://www.apollo247.com" target="_blank" class="card-button">Visit Website</a>
+                </div>
+                <div class="website-card" data-category="shopping">
+                    <div class="card-icon"><i class="fas fa-capsules"></i></div>
+                    <h3 class="card-title">Netmeds</h3>
+                    <p class="card-description">Online pharmacy and wellness products.</p>
+                    <a href="https://www.netmeds.com" target="_blank" class="card-button">Visit Website</a>
+                </div>
+                <div class="website-card" data-category="shopping">
+                    <div class="card-icon"><i class="fas fa-ticket-alt"></i></div>
                     <h3 class="card-title">BookMyShow</h3>
-                    <p class="card-description">Book movie tickets, events, and entertainment shows online.</p>
-                    <a href="https://bookmyshow.com" target="_blank" class="card-button">Visit Website</a>
+                    <p class="card-description">Entertainment tickets and events booking.</p>
+                    <a href="https://in.bookmyshow.com" target="_blank" class="card-button">Visit Website</a>
                 </div>
-
-                <div class="website-card" data-category="daily">
-                    <div class="card-icon">
-                        <i class="fas fa-newspaper"></i>
-                    </div>
-                    <h3 class="card-title">Times of India</h3>
-                    <p class="card-description">Leading Indian news website for latest news, sports, and business updates.</p>
-                    <a href="https://timesofindia.indiatimes.com" target="_blank" class="card-button">Visit Website</a>
+                <div class="website-card" data-category="shopping">
+                    <div class="card-icon"><i class="fas fa-gift"></i></div>
+                    <h3 class="card-title">Ferns N Petals</h3>
+                    <p class="card-description">Flowers, gifts, and special occasion items.</p>
+                    <a href="https://www.fnp.com" target="_blank" class="card-button">Visit Website</a>
                 </div>
-
-                <div class="website-card" data-category="daily">
-                    <div class="card-icon">
-                        <i class="fas fa-globe"></i>
-                    </div>
-                    <h3 class="card-title">BBC News</h3>
-                    <p class="card-description">International news, analysis, and breaking news from around the world.</p>
-                    <a href="https://bbc.com/news" target="_blank" class="card-button">Visit Website</a>
-                </div>
-
-                <div class="website-card" data-category="daily">
-                    <div class="card-icon">
-                        <i class="fas fa-calculator"></i>
-                    </div>
-                    <h3 class="card-title">Calculator.net</h3>
-                    <p class="card-description">Free online calculators for math, finance, health, and unit conversions.</p>
-                    <a href="https://calculator.net" target="_blank" class="card-button">Visit Website</a>
-                </div>
-
-                <div class="website-card" data-category="daily">
-                    <div class="card-icon">
-                        <i class="fas fa-exchange-alt"></i>
-                    </div>
-                    <h3 class="card-title">XE Currency</h3>
-                    <p class="card-description">Live currency exchange rates and currency converter tool.</p>
-                    <a href="https://xe.com" target="_blank" class="card-button">Visit Website</a>
-                </div>
-
-                <div class="website-card" data-category="daily">
-                    <div class="card-icon">
-                        <i class="fab fa-microsoft"></i>
-                    </div>
-                    <h3 class="card-title">Outlook</h3>
-                    <p class="card-description">Microsoft's free email service with calendar and office integration.</p>
-                    <a href="https://outlook.com" target="_blank" class="card-button">Visit Website</a>
-                </div>
-
-                <div class="website-card" data-category="daily">
-                    <div class="card-icon">
-                        <i class="fab fa-google-drive"></i>
-                    </div>
-                    <h3 class="card-title">Google Drive</h3>
-                    <p class="card-description">Cloud storage service for file backup, sharing, and collaboration.</p>
-                    <a href="https://drive.google.com" target="_blank" class="card-button">Visit Website</a>
-                </div>
-
-                <div class="website-card" data-category="daily">
-                    <div class="card-icon">
-                        <i class="fas fa-tachometer-alt"></i>
-                    </div>
-                    <h3 class="card-title">Speedtest</h3>
-                    <p class="card-description">Test your internet connection speed for download, upload, and ping.</p>
-                    <a href="https://speedtest.net" target="_blank" class="card-button">Visit Website</a>
-                </div>
-
-                <div class="website-card" data-category="daily">
-                    <div class="card-icon">
-                        <i class="fas fa-clock"></i>
-                    </div>
-                    <h3 class="card-title">Online Timer</h3>
-                    <p class="card-description">Simple online timer, stopwatch, and alarm clock for productivity.</p>
-                    <a href="https://online-stopwatch.com" target="_blank" class="card-button">Visit Website</a>
-                </div>
-
-                <div class="website-card" data-category="daily">
-                    <div class="card-icon">
-                        <i class="fas fa-file-pdf"></i>
-                    </div>
-                    <h3 class="card-title">PDF24 Tools</h3>
-                    <p class="card-description">Free online PDF tools for editing, converting, and manipulating PDF files.</p>
-                    <a href="https://tools.pdf24.org" target="_blank" class="card-button">Visit Website</a>
-                </div>
-
-                <div class="website-card" data-category="daily">
-                    <div class="card-icon">
-                        <i class="fas fa-palette"></i>
-                    </div>
-                    <h3 class="card-title">Canva</h3>
-                    <p class="card-description">Easy-to-use design platform for creating graphics, presentations, and social media content.</p>
-                    <a href="https://canva.com" target="_blank" class="card-button">Visit Website</a>
+                <div class="website-card" data-category="shopping">
+                    <div class="card-icon"><i class="fas fa-warehouse"></i></div>
+                    <h3 class="card-title">IKEA India</h3>
+                    <p class="card-description">Home furniture and decor.</p>
+                    <a href="https://www.ikea.com/in/en" target="_blank" class="card-button">Visit Website</a>
                 </div>
 
                 <!-- Social Media -->
@@ -2533,7 +4190,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="about" class="contact">
+    <section id="contact" class="contact">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Get In Touch</h2>
@@ -2650,7 +4307,7 @@
     </footer>
 
     <!-- Contact Section (Legacy) -->
-    <section id="contact" class="contact" style="display: none;">
+    <section id="contact-legacy" class="contact" style="display: none;">
         <div class="container">
             <h2 class="section-title">Contact Us</h2>
             <div class="contact-content">

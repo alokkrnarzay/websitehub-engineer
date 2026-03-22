@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="WebsiteHub favicon">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#60a5fa"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+    <linearGradient id="cube" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#dbeafe" stop-opacity="0.92"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="4" y="4" width="56" height="56" rx="14" fill="url(#bg)"/>
+  <path fill="url(#cube)" d="M32 16 47 24.5V39.5L32 48 17 39.5V24.5L32 16Zm0 4.2-10.8 6.1L32 32.3l10.8-6-10.8-6.1Zm-12 9.5V38l10 5.7v-11l-10-5.5Zm24 0-10 5.5v11l10-5.7v-8.3Z"/>
+</svg>
